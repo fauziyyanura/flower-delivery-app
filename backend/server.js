@@ -37,6 +37,11 @@ res.json({ message: "Welcome to the Flower API!" });
 app.use("/api/flowers", flowerRoutes);
 app.use("/api/users", userRoutes);
 
+// Adding the /api/flower endpoint
+app.get("/api/flower", (req, res) => {
+    res.json({ message: "Welcome to the single Flower API!", data: { name: "Rose", color: "Red" } });
+});
+
 
 app.use((req, res, next) => {
     console.log(`📩 Incoming Request: ${req.method} ${req.url}`);
