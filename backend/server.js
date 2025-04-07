@@ -4,6 +4,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const flowerRoutes = require("./routes/flowerRoutes");
 const userRoutes = require("./routes/userRoutes");
+const User = require('./models/userModel');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -37,12 +38,25 @@ res.json({ message: "Welcome to the Flower API!" });
 app.use("/api/flowers", flowerRoutes);
 app.use("/api/users", userRoutes);
 
+app.get("/api/users", async (req, res) => {
+    try {
+        const users = await User.find(); // Fetch all users from MongoDB
+        res.status(200).json(users); // Return the user data as JSON
+    } catch (error) {
+        console.error("❌ ERROR: Failed to fetch users:", error.message);
+        res.status(500).json({ message: "Failed to fetch users", error: error.message });
+    }
+});
+
+
 // Adding the /api/flower endpoint
 app.get("/api/flower", (req, res) => {
     res.json({ message: "Welcome to the single Flower API!", data: { name: "Rose", color: "Red" } });
 });
 
 
+
+// Adding debug middleware
 app.use((req, res, next) => {
     console.log(`📩 Incoming Request: ${req.method} ${req.url}`);
     console.log("Headers:", req.headers);
