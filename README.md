@@ -10,6 +10,7 @@ Welcome to the Flower Delivery Website! This platform allows users to order beau
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Setup Instructions](#setup-instructions)
+- [Live Deployment Links(tested only on postman)](#Live-Deployment-Links(tested-only-on-postman))
 - [API Endpoints](#api-endpoints)
 - [Environment Variables](#environment-variables)
 - [Contributing](#contributing)
@@ -61,6 +62,13 @@ Create a .env file in the root directory.
 Add the following variables:
 PORT=5000
 MONGODB_URI=your-mongodb-atlas-uri
+
+
+## Live Deployment Links(tested only on postman):
+
+User Registration: https://flower-delivery-app.onrender.com/api/users/register
+
+User Login: https://flower-delivery-app.onrender.com/api/users/login
 
 ## API Endpoints
 Base URL: http://localhost:5000/api
