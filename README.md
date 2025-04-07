@@ -64,11 +64,11 @@ PORT=5000
 MONGODB_URI=your-mongodb-atlas-uri
 
 
-## Live Deployment Links(tested only on postman):
+## Live Deployment Links(tested via browser/postman):
 
-User Registration: https://flower-delivery-app.onrender.com/api/users/register
+User Registration: https://flower-delivery-app.onrender.com/api/users
+Flower endpoints : https://flower-delivery-app.onrender.com/api/flowers
 
-User Login: https://flower-delivery-app.onrender.com/api/users/login
 
 ## API Endpoints
 Base URL: http://localhost:5000/api
@@ -115,7 +115,7 @@ If you have any questions or need further assistance, feel free to reach out:
 - **Email:** fauziyyanuraahmad@gmail.com
 - **GitHub:** https://github.com/fauziyyanura
 - **Website:** https://flower-delivery-app.onrender.com/api/flowers
-                https://flower-delivery-web.onrender.com/api/flowers
+                https://flower-delivery-app.onrender.com/api/users
 
 
 
