@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const path = require("path");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const flowerRoutes = require("./routes/flowerRoutes");
@@ -26,8 +27,12 @@ mongoose
 
 // ✅ Middleware
 app.use(cors());
-app.use(express.json());
-app.use("/uploads", express.static("uploads"));
+app.use(express.json()); // Parses JSON bodies
+
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
+
+
 
 // ✅ Root Route
 app.get("/", (req, res) => {
@@ -65,10 +70,6 @@ app.use((req, res, next) => {
     next();
 });
 
-
-app.use(express.json()); // Parses JSON bodies
-app.use(express.urlencoded({ extended: true })); // Parses URL-encoded bodies
-app.use("/uploads", express.static("uploads"));
 
 // ✅ Handle 404 Errors
 app.use((req, res) => {
