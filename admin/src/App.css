@@ -1,0 +1,254 @@
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+}
+
+h1, p, button {
+  margin: 0;
+}
+
+/* Admin Title */
+.admin-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+  text-align: center;
+}
+
+/* Navigation Buttons */
+.form-nav {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.nav-button {
+  padding: 8px 15px;
+  border: 2px solid #666;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+/* Vertical Line Below Navigation */
+.vertical-line {
+  width: 80%;
+  height: 2px;
+  background-color: #999;
+  margin: 10px 0;
+}
+
+
+.flowers-list {
+  display: flex;
+  flex-direction: column; /* Change from row-based layout */
+  align-items: center; /* Center each flower card */
+  gap: 20px;
+  width: 100%;
+}
+
+/* Individual Flower Card */
+.flower-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.flower-card:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Flower Image Styling */
+.flower-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+}
+
+/* Delete Button */
+.delete-btn {
+  padding: 6px 12px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: darkred;
+}
+
+/* Flower Information */
+.flower-info {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.flower-info h2 {
+  font-size: 18px;
+  color: black;
+}
+
+.flower-info p {
+  margin: 5px 0;
+}
+
+.flower-category,
+.flower-price {
+  color: red;
+  font-weight: bold;
+}
+
+.flower-description {
+  font-style: italic;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+
+/* Admin Panel */
+.admin-panel {
+  max-width: 600px;
+  width: 400px ;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-buttons button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background: gray;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.nav-buttons .active {
+  background: black;
+}
+
+
+.upload-box {
+  width: 150px;
+  height: 100px;
+  margin-bottom: 20px;
+  border: 2px dashed #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: gray;
+}
+
+
+.upload-box:hover {
+  background: rgba(0, 123, 255, 0.1);
+}
+
+/* Image Preview */
+.preview-image {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Form Styling */
+.add-flower-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-flower-form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.add-flower-form input,
+.add-flower-form textarea {
+  width:100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+/* Category & Price Side by Side */
+.input-row {
+  display: flex;
+  gap: 50px;
+}
+
+.input-group {
+  flex: 1;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #28a745;
+  color: #fff;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background: #218838;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
