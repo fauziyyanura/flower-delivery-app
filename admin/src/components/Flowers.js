@@ -8,36 +8,28 @@ function Flowers() {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-
-  useEffect(() => {
-  setLoading(true);
-  setError(null);
-
-  fetch(`${process.env.REACT_APP_API_URL}/api/flowers`)
-    .then((res) => res.json())
-    .then((data) => {
-      console.log("API Response:", data); // ✅ See full API response
-    })
-    .catch((err) => {
-      console.error("Fetch error:", err);
-      setError("Failed to fetch flowers");
-    })
-    .finally(() => setLoading(false));
-}, []);
-
-  // Fetch flowers from API
   useEffect(() => {
     setLoading(true);
     setError(null);
 
     fetch(`${process.env.REACT_APP_API_URL}/api/flowers`)
       .then((res) => res.json())
-      .then((data) => setFlowers(data))
-      .catch((err) => {
-        console.error("Fetch error:", err);
-        setError("Failed to fetch flowers");
+      .then((data) => {
+        console.log("API Response:", data); // ✅ Debug API response
+
+        if (Array.isArray(data)) { 
+          setFlowers(data); // ✅ Ensure flowers is set as an array
+        } else {
+          setFlowers([]);
+          setError("Unexpected API response.");
+        }
       })
-      .finally(() => setLoading(false));
+      .catch((err) => {
+        console.error("❌ Error fetching flowers:", err.message);
+        setFlowers([]);
+        setError("Failed to fetch flowers.");
+      })
+      .finally(() => setLoading(false)); // ✅ Ensure loading stops
   }, []);
 
   // Function to delete a flower
@@ -55,12 +47,11 @@ function Flowers() {
         try {
           await fetch(`${process.env.REACT_APP_API_URL}/api/flowers/${id}`, { method: "DELETE" });
 
-          // Update state to remove deleted flower
           setFlowers((prevFlowers) => prevFlowers.filter((flower) => flower._id !== id));
-
           Swal.fire("Deleted!", "The flower has been removed.", "success");
         } catch (err) {
-          Swal.fire("Error!", "Failed to delete flower", "error");
+          console.error("❌ Error deleting flower:", err.message);
+          Swal.fire("Error!", "Failed to delete flower.", "error");
         }
       }
     });
@@ -81,22 +72,20 @@ function Flowers() {
       <div className="vertical-line"></div>  
 
       <div className="flowers-list">
-        {flowers.length === 0 ? (
-          <p>No flowers available</p>
-        ) : (
+        {console.log("Flowers state:", flowers)} {/* ✅ Debug flowers array */}
+        {flowers.length > 0 ? (
           flowers.map((flower) => {
-            // Ensure correct image URL formatting
-            const imageUrl = flower.image?.startsWith("/uploads/")
-              ? `${process.env.REACT_APP_API_URL}${flower.image}`
-              : `${process.env.REACT_APP_API_URL}/uploads/${flower.image}`;//
-        
+            // ✅ Ensure correct image URL format
+            const imageUrl = flower.image?.startsWith("http") 
+              ? flower.image 
+              : `${process.env.REACT_APP_API_URL}${flower.image}`;
 
             return (
               <div key={flower._id} className="flower-card">
                 <img
                   src={imageUrl}
                   alt={flower.name}
-                  
+                  onError={(e) => (e.target.src = "https://via.placeholder.com/150")}
                   className="flower-image"
                 />
                 <div className="flower-info">
@@ -109,6 +98,8 @@ function Flowers() {
               </div>
             );
           })
+        ) : (
+          <p>No flowers available.</p>
         )}
       </div>
 

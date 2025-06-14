@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+
 const flowerSchema = new mongoose.Schema(
     {
     name: { type: String, required: true },
@@ -9,4 +10,6 @@ const flowerSchema = new mongoose.Schema(
 },
 { timestamps: true } 
 );
-module.exports = mongoose.model("Flower", flowerSchema);
+//module.exports = mongoose.model("Flower", flowerSchema);//
+const Flower = mongoose.model('Flower', flowerSchema);
+module.exports = Flower;

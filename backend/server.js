@@ -4,6 +4,7 @@ const path = require("path");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const flowerRoutes = require("./routes/flowerRoutes");
+//const uploadRoutes = require("./routes/uploadRoutes");//
 const userRoutes = require("./routes/userRoutes");
 const User = require('./models/userModel');
 
@@ -28,8 +29,11 @@ mongoose
 // ✅ Middleware
 app.use(cors());
 app.use(express.json()); // Parses JSON bodies
-
+//app.use("/uploads", express.static("uploads"));//
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
+
+//app.use("/uploads", express.static(path.join(__dirname, "uploads")));//
 
 
 
@@ -59,7 +63,7 @@ app.get("/api/flower", (req, res) => {
     res.json({ message: "Welcome to the single Flower API!", data: { name: "Rose", color: "Red" } });
 });
 
-
+//app.use("/api", uploadRoutes);//
 
 // Adding debug middleware
 app.use((req, res, next) => {
