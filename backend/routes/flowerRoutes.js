@@ -1,6 +1,9 @@
 const express = require("express");
-const upload = require("../config/multerConfig"); 
-const { addFlower, getAllFlowers, deleteFlower } = require("../controllers/flowerController");
+const {
+  addFlower,
+  getAllFlowers,
+  deleteFlower,
+} = require("../controllers/flowerController");
 
 const router = express.Router();
 
@@ -8,7 +11,7 @@ const router = express.Router();
 router.get("/", getAllFlowers);
 
 // Add a new flower (Ensure `image` matches Postman field name)
-router.post("/", upload.single("photo"), addFlower);
+router.post("/", addFlower);
 
 // Delete a flower by ID
 router.delete("/:id", deleteFlower);
