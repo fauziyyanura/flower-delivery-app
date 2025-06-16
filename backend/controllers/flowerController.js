@@ -3,62 +3,73 @@ const cloudinary = require("../config/cloudinaryConfig");
 
 const addFlower = async (req, res) => {
   try {
-    console.log("🟢 Request Received");
-    console.log("📦 Request Body:", req.body);
-    console.log("📸 Uploaded File:", req.files); // Log the uploaded file
+    const { name, description, price, category, image } = req.body;
+    let imagePath = image;
 
-    if (!req.files) {
-      console.error("❌ Image Upload Missing");
-      return res.status(400).json({ message: "Image upload required" });
+    // If an image file is uploaded, use Cloudinary
+    if (req.files && req.files.image) {
+      const file = req.files.image;
+
+      const result = await cloudinary.uploader.upload(file.tempFilePath, {
+        folder: "flower_app_images",
+        use_filename: true,
+        unique_filename: false,
+      });
+
+      imagePath = result.secure_url;
     }
 
-    const { name, description, category } = req.body;
-    const price = parseFloat(req.body.price);
-    const file = req.files.image;
-
-    // Upload image to Cloudinary
-    const result = await cloudinary.uploader.upload(file.tempFilePath, {
-      folder: "flower_app_images",
-      use_filename: true,
-      unique_filename: false,
-    });
-
-    const imagePath = result.secure_url; // Cloudinary secure URL for the image
-
+    // Now create the flower with either the uploaded image OR the provided image URL
     const newFlower = new Flower({
       name,
       description,
-      price,
+      price: parseFloat(price),
       category,
       image: imagePath,
     });
-    await newFlower.save();
 
-    console.log("✅ Flower Added Successfully:", newFlower);
-    res
-      .status(201)
-      .json({ message: "Flower added successfully!", flower: newFlower });
+    await newFlower.save();
+    res.status(201).json({ message: "Flower added successfully!", flower: newFlower });
+
   } catch (error) {
     console.error("❌ Error in addFlower:", error);
-    res
-      .status(500)
-      .json({ message: "Error adding flower", error: error.message });
+    res.status(500).json({ message: "Error adding flower", error: error.message });
   }
 };
+
 
 
 const getAllFlowers = async (req, res) => {
   try {
-    console.log("Fetching all flowers...");
     const flowers = await Flower.find();
-    res.status(200).json(flowers);
+
+    const formattedFlowers = flowers.map((flower) => {
+      const flowerObj = flower.toObject();
+
+      if (!flowerObj.image.startsWith("http")) {
+        flowerObj.image = `${process.env.SERVER_BASE_URL}${flowerObj.image}`;
+      }
+
+      return flowerObj;
+    });
+
+    res.json(formattedFlowers);
   } catch (error) {
-    console.error("Error fetching flowers:", error);
-    res
-      .status(500)
-      .json({ message: "Error retrieving flowers", error: error.message });
+    res.status(500).json({ message: error.message });
   }
 };
+
+const getFlowerById = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const flower = await Flower.findById(id);
+    if (!flower) return res.status(404).json({ message: 'Flower not found' });
+    res.status(200).json(flower);
+  } catch (error) {
+    res.status(500).json({ message: 'Server error', error });
+  }
+};
+
 
 // Function to delete a flower
 const deleteFlower = async (req, res) => {
@@ -79,6 +90,39 @@ const deleteFlower = async (req, res) => {
   }
 };
 
+const updateFlower = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedData = req.body;
+
+    // If an image file is uploaded, upload it to Cloudinary
+    if (req.files && req.files.image) {
+      const file = req.files.image;
+      const result = await cloudinary.uploader.upload(file.tempFilePath, {
+        folder: "flower_app_images",
+        use_filename: true,
+        unique_filename: false,
+      });
+      updatedData.image = result.secure_url;
+    }
+
+    const updatedFlower = await Flower.findByIdAndUpdate(id, updatedData, {
+      new: true,
+      runValidators: true,
+    });
+
+    if (!updatedFlower) {
+      return res.status(404).json({ message: "Flower not found" });
+    }
+
+    res.status(200).json({ message: "Flower updated successfully", flower: updatedFlower });
+  } catch (error) {
+    console.error("❌ Error updating flower:", error);
+    res.status(500).json({ message: "Error updating flower", error: error.message });
+  }
+};
+
+
 // Ensures all the functions are exported
-module.exports = { addFlower, getAllFlowers, getFlowerById, deleteFlower };
+module.exports = { addFlower, getAllFlowers, getFlowerById, deleteFlower, updateFlower };
 
