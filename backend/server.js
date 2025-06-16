@@ -4,7 +4,6 @@ const path = require("path");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const flowerRoutes = require("./routes/flowerRoutes");
-//const uploadRoutes = require("./routes/uploadRoutes");//
 const userRoutes = require("./routes/userRoutes");
 const User = require("./models/userModel");
 const fileUpload = require("express-fileupload");
@@ -38,7 +37,7 @@ app.use(
   })
 );
 
-// app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
 
 // ✅ Root Route
 app.get("/", (req, res) => {
