@@ -3,12 +3,16 @@ const {
     addFlower,
     getAllFlowers,
     deleteFlower,
+    updateFlower,
 } = require("../controllers/flowerController");
 
 const router = express.Router();
 
 // Add a new flower (Ensure `image` matches Postman field name)
 router.post("/", addFlower);
+
+
+router.get("/", getAllFlowers);
 
 // Delete a flower by ID
 router.delete("/:id", async (req, res) => {
@@ -23,5 +27,10 @@ router.delete("/:id", async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+
+
+router.put("/:id", updateFlower);
+
+
 
 module.exports = router;
