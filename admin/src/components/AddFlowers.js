@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 
+
 function AddFlowers() {
   const [formData, setFormData] = useState({
     name: "",
@@ -42,15 +43,8 @@ function AddFlowers() {
   };
 
   return (
-    <div className="admin-panel">
-      {/* Admin Panel Navigation */}
-      <div className="form-nav">
-        <h1>Admin Panel</h1>
-        <div className="nav-buttons">
-          <button onClick={() => window.location.href = "/"}>Flowers</button>
-          <button className="active" onClick={() => window.location.href = "/add-flowers"}>Add Flowers</button>
-        </div>
-      </div>
+    <div className="flower-container">
+      
 
       {/* Upload Box */}
       <input type="file" ref={fileInputRef} onChange={handleFileChange} accept="image/*" hidden />
