@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+
 import Swal from "sweetalert2";
 
 function Flowers() {
   const [flowers, setFlowers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
+ // const navigate = useNavigate();//
 
   useEffect(() => {
     setLoading(true);
@@ -61,17 +61,8 @@ function Flowers() {
   if (error) return <p style={{ color: "red" }}>Error: {error}</p>;
 
   return (
-    <div className="admin-panel">
-      <div className="form-nav">
-        <h1>Admin Panel</h1>
-        <button onClick={() => navigate("/")}>Flowers</button>
-        <button onClick={() => navigate("/add-flowers")}>Add Flowers</button>
-      </div>
-
-      {/* Vertical Line Under Navigation */}
-      <div className="vertical-line"></div>  
-
-      <div className="flowers-list">
+    <div className="flower-container">
+       <div className="flowers-list">
         {console.log("Flowers state:", flowers)} {/* ✅ Debug flowers array */}
         {flowers.length > 0 ? (
           flowers.map((flower) => {
