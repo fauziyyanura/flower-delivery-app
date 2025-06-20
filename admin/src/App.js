@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Flowers from "./components/Flowers";
 import AddFlowers from "./components/AddFlowers";
-import NavBar from "./components/NavBar"; // ✅ bring in your nav
+import NavBar from "./components/NavBar"; // 
 import "./App.css";
 
 function App() {

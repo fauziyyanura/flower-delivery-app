@@ -1,0 +1,79 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  color: #222;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+}
+
+.nav-actions button {
+margin-left: 1rem;
+padding: 0.5rem 1rem;
+border: none;
+background-color: #ff5c8a;
+color: #fff;
+border-radius: 4px;
+cursor: pointer;
+font-weight: 500;
+}
+
+
+.utility-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.utility-left a,
+.utility-right a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 1.5rem;
+  font-weight: 500;
+}
+
+.cart {
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+
+.navbar-wrapper {
+  display: block;
+}
+
+@media (max-width: 1023px) {
+  .navbar-wrapper {
+    display: none;
+  }
+}
+
