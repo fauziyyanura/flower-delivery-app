@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# flower-delivery-website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Flower Delivery Website! This platform allows users to order beautiful flowers for delivery, track their orders, and enjoy a seamless shopping experience. Whether it's for a special occasion or just to brighten someone's day, this website has you covered.
 
-## Available Scripts
 
+## Table of Contents
+- [Project Name](#Project-Name)
+- [Table of Contents](#Table-of-Contents)
+- [Introduction](#Introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup Instructions](#setup-instructions)
+- [Live Deployment Links(tested only on postman)](#Live-Deployment-Links(tested-only-on-postman))
+- [API Endpoints](#api-endpoints)
+- [Environment Variables](#environment-variables)
+- [Contributing](#contributing)
+- [License](#license)
+- [Learn more about my flower delivery app admin](#Learn-more-about-my-flower-delivery-app-admin)
+- [Author(s)](#authors)
+
+## Introduction
+#  Flower Delivery Website
+
+Welcome to the **Flower Delivery Website**, your go-to platform for sending love, joy, and beauty through flowers! This project is designed to make flower delivery effortless and delightful, whether you're brightening someone's day, celebrating a milestone, or expressing your feelings. With a user-friendly interface and a robust backend, this website ensures a seamless experience for both customers and administrators.
+
+## Features
+- **Browse Flowers**: View a catalog of flower arrangements with prices and details.
+- **Search Functionality**: Find flowers based on categories, occasions, or custom keywords.
+- **Add to Cart**: Simple and secure shopping cart feature.
+- **Order Tracking**: Track the status of your flower orders in real-time.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop users.
+
+## Technologies Used
+- **Frontend**: HTML, CSS, JavaScript (or React)
+- **Backend**: Node.js with Express.js
+- **Database**: MongoDB (hosted on MongoDB Atlas)
+- **File Uploads**: Multer for handling image uploads
+- **Environment Management**: dotenv
+- **Cross-Origin Requests**: CORS
+
+## Setup Instructions
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/fauziyyanura/flower-delivery-website.git
+
+   ```
+
+2. **2\. **Navigate to the Project Directory:**
+
+```sh
+cd flower-delivery-website
+
+```
 In the project directory, you can run:
 
-### `npm start`
+### `node server.js`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Set Up Environments Variables**
+Create a .env file in the root directory.
 
-### `npm test`
+Add the following variables:
+PORT=5000
+MONGODB_URI=your-mongodb-atlas-uri
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Live Deployment Link:
+Admin dashboard : https://flower-delivery-app-admin.onrender.com
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API Endpoints
+Base URL: http://localhost:5000/api
+ https://flower-delivery-web.onrender.com/api/flowers
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ http://localhost:5000/api/users/register
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ http://localhost:5000/api/users/login
+Get All Flowers: GET /flowers
 
-### `npm run eject`
+-Add a Flower: POST /flowers
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-Body (form-data):
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-image (file): Flower image
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-Additional fields (e.g., name, price, category)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-Delete a Flower: DELETE /flowers/:id
 
-## Learn More
+## Contributing
+We welcome contributions! To contribute:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-Fork the repository.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-Create a new branch: git checkout -b feature-name.
 
-### Code Splitting
+-Make your changes and commit: git commit -m "Add feature-name".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-Push the branch: git push origin feature-name.
 
-### Analyzing the Bundle Size
+-Create a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Licenses
+This project is licensed under the MIT Licenses - See the [LICENSE](LICENSE) file for more details.
 
-### Making a Progressive Web App
+## Learn more about my flower delivery app admin dashboard
+Watch my loom video: [video](https://www.loom.com/share/448379ea424b41d9a02b89d580cc458d?sid=bd6a8a9d-4500-4718-845f-16521123880c)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Author(s)
+If you have any questions or need further assistance, feel free to reach out:
+- **Name:** Fauziyya Nura Ahmed
+- **Email:** fauziyyanuraahmad@gmail.com
+- **GitHub:** https://github.com/fauziyyanura
+- **Website:**Admin dashboard : https://flower-delivery-app-admin.onrender.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Website:** https://flower-delivery-app.onrender.com/api/flowers
+                https://flower-delivery-app.onrender.com/api/users
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+Thank you for Visiting the admin flower dashboard. We hope you find it useful and enjoy contributing to the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
