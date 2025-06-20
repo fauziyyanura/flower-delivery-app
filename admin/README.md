@@ -34,7 +34,7 @@ Welcome to the **Flower Delivery Website**, your go-to platform for sending love
 - **Frontend**: HTML, CSS, JavaScript (or React)
 - **Backend**: Node.js with Express.js
 - **Database**: MongoDB (hosted on MongoDB Atlas)
-- **File Uploads**: Multer for handling image uploads
+- **File Uploads**: Cloudinary for handling image upload
 - **Environment Management**: dotenv
 - **Cross-Origin Requests**: CORS
 
