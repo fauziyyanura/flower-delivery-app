@@ -105,7 +105,7 @@ We welcome contributions! To contribute:
 ## Licenses
 This project is licensed under the MIT Licenses - See the [LICENSE](LICENSE) file for more details.
 
-## Learn more about my flower delivery app admin dSashboard
+## Learn more about my flower delivery app admin dashhboard
 Watch my loom video: [video](https://www.loom.com/share/448379ea424b41d9a02b89d580cc458d?sid=c3b5e08e-b67b-414c-a878-81d5be7d0d43)
 
 
