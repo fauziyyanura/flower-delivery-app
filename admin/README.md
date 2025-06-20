@@ -10,7 +10,7 @@ Welcome to the Flower Delivery Website! This platform allows users to order beau
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Setup Instructions](#setup-instructions)
-- [Live Deployment Links(tested only on postman)](#Live-Deployment-Links(tested-only-on-postman))
+- [Live Deployment Link](#Live-Deployment-Link)
 - [API Endpoints](#api-endpoints)
 - [Environment Variables](#environment-variables)
 - [Contributing](#contributing)
