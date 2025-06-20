@@ -114,7 +114,7 @@ If you have any questions or need further assistance, feel free to reach out:
 - **Name:** Fauziyya Nura Ahmed
 - **Email:** fauziyyanuraahmad@gmail.com
 - **GitHub:** https://github.com/fauziyyanura
-- **Website:** https://flower-delivery-app-admin.onrender.com
+- **Website:** https://flower-delivery-app-admin.onrender.com (for admin dashboard)
                 https://flower-delivery-app.onrender.com/api/flowers
                 https://flower-delivery-app.onrender.com/api/users
 
