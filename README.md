@@ -10,12 +10,12 @@ Welcome to the Flower Delivery Website! This platform allows users to order beau
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Setup Instructions](#setup-instructions)
-- [Live Deployment Links(tested only on postman)](#Live-Deployment-Links(tested-only-on-postman))
+- [Live Deployment Link](#Live-Deployment-Link)
 - [API Endpoints](#api-endpoints)
 - [Environment Variables](#environment-variables)
 - [Contributing](#contributing)
 - [License](#license)
-- [Learn more about my flower delivery app backend](#Learn-more-about-my-flower-delivery-app-backend)
+- [Learn more about my flower delivery app admin](#Learn-more-about-my-flower-delivery-app-admin)
 - [Author(s)](#authors)
 
 ## Introduction
@@ -41,7 +41,7 @@ Welcome to the **Flower Delivery Website**, your go-to platform for sending love
 ## Setup Instructions
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/fauziyyanura/flower-delivery-website.git
+   git clone https://github.com/fauziyyanura/flower-delivery-app.git
 
    ```
 
@@ -64,11 +64,10 @@ PORT=5000
 MONGODB_URI=your-mongodb-atlas-uri
 
 
-## Live Deployment Links(tested via browser/postman):
+## Live Deployment Link:
+RENDER DEPLOYMENT LINK FOR ADMIN PANEL: https://flower-delivery-app-admin.onrender.com
 
-User Registration: https://flower-delivery-app.onrender.com/api/users
-Flower endpoints : https://flower-delivery-app.onrender.com/api/flowers
-
+Admin Panel : https://flower-delivery-app-admin.onrender.com
 
 ## API Endpoints
 Base URL: http://localhost:5000/api
@@ -106,7 +105,7 @@ We welcome contributions! To contribute:
 This project is licensed under the MIT Licenses - See the [LICENSE](LICENSE) file for more details.
 
 ## Learn more about my flower delivery app backend
-Watch my loom video: [video](https://www.loom.com/share/d3e613179fa44f31b0f9551f0a1fa174?sid=d8223c08-29b8-41bd-9729-7092e4421e53)
+Watch my loom video: [video](https://www.loom.com/share/448379ea424b41d9a02b89d580cc458d?sid=c3b5e08e-b67b-414c-a878-81d5be7d0d43)
 
 
 ## Author(s)
@@ -114,9 +113,7 @@ If you have any questions or need further assistance, feel free to reach out:
 - **Name:** Fauziyya Nura Ahmed
 - **Email:** fauziyyanuraahmad@gmail.com
 - **GitHub:** https://github.com/fauziyyanura
-- **Website:** https://flower-delivery-app.onrender.com/api/flowers
-                https://flower-delivery-app.onrender.com/api/users
-
+- **Website:** https://flower-delivery-app-admin.onrender.com
 
 
 Thank you for Visiting the Flower delivery Website Repository. We hope you find it useful and enjoy contributing to the project.
