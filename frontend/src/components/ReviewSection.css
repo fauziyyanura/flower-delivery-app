@@ -1,0 +1,166 @@
+.review-section {
+  background-color: #fff;
+  padding: 80px 40px;
+  text-align: center;
+  color: #222;
+}
+
+.google-logo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.review-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #888;
+  margin-bottom: 40px;
+}
+
+.review-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  transform: translateY(-40px)
+}
+
+.arrow:hover {
+  color: #f97da7;
+}
+
+.review-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-content {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+
+/*.quote {
+  font-size: 28px;
+  font-style: italic;
+  line-height: 120%;
+  font-weight: 400;
+}*/
+
+.quote {
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+
+/*.top-line {
+  margin-bottom: 10px;
+}*/
+
+.top-line {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  margin-bottom: 10px;
+}
+
+
+.bottom-line {
+  font-style: normal; /* optional: remove italic from 2nd line */
+  color: #444;
+  margin-top: -20px;
+}
+
+
+.author {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+.review-button {
+  padding: 12px 24px;
+  background-color: #f97da7;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.review-button:hover {
+  background-color: #e76691;
+}
+
+@media (max-width: 768px) {
+  .review-box {
+    flex-direction: column;
+  }
+
+  .arrow {
+    order: -1;
+  }
+
+  .quote {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .review-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+  }
+
+  .review-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+
+  .review-section blockquote {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .author {
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 25px;
+  }
+
+  .review-section button {
+    padding: 10px 24px;
+    background-color: #f97da7;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .review-section button:hover {
+    background-color: #e76691;
+  }
+}
+

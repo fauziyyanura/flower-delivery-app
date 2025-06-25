@@ -1,0 +1,143 @@
+
+.footer {
+  background-color: #f8f8f8;
+  padding: 60px 40px;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start; /* makes sure all columns align at the top */
+  gap: 40px;
+}
+
+.footer-col,
+.reminder-col {
+  flex: 1;
+  min-width: 220px;
+}
+
+
+.footer-col {
+  min-width: 200px;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.footer-col li:hover {
+  color: #f97da7;
+}
+
+/* Reminder column specific */
+.reminder-col p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.reminder-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.reminder-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reminder-form input {
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 0.95rem;
+}
+
+.reminder-form button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reminder-form button:hover {
+  background-color: #e76691;
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .reminder-form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .footer-col {
+    min-width: 250px;
+  }
+
+  .reminder-col {
+    grid-column: span 2;
+    text-align: center;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.4rem;
+  }
+
+  .footer-col,
+.reminder-col{
+  flex: 2;
+}
+}
+

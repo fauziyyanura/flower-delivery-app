@@ -1,35 +1,81 @@
-import React from "react";
-import "./Hero.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+import './Hero.css';
+
+import floristImg from '../assets/florist.png';
+import flowerFresh from '../assets/flower-fresh.png';
+import flowerDried from '../assets/flower-dried.png';
+import flowerLive from '../assets/flower-live.png';
+import flowerCandle from '../assets/flower-candle.png';
+import flowerFreshener from '../assets/flower-freshener.png';
+
+const categories = [
+  { image: flowerFresh, label: 'Fresh Flowers', path: '/shop/fresh-flowers' },
+  { image: flowerDried, label: 'Dried Flowers', path: '/shop/dried-flowers' },
+  { image: flowerLive, label: 'Live Plants', path: '/shop/live-plants' },
+  { image: flowerCandle, label: 'Aroma Candles', path: '/shop/aroma-candles' },
+  { image: flowerFreshener, label: 'Fresheners', path: '/shop/fresheners' },
+];
+
 
 const Hero = () => {
   return (
     <section className="hero-section">
-      <div className="hero-logo">Kyiv LuxeBouquets<sup>®</sup></div>
+      {/* Left Column */}
+      <div className="hero-left">
+        <h1>Kyiv LuxeBouquets®</h1>
+        <p className="subheading">
+          Discover Uniquely Crafted Bouquets and Gifts for Any Occasion: Spread Joy with Our Online Flower Delivery Service.
+        </p>
 
-      <div className="hero-content">
-        <div className="hero-left">
-          <h1>Discover Uniquely Crafted Bouquets and Gifts for Any Occasion</h1>
-          <p>Spread Joy with Our Online Flower Delivery Service</p>
-          <div className="hero-description">
+        <div className="florist-info">
+          <img src={floristImg} alt="Florist" />
+          <p>
             Experience the joy of giving with our modern floral studio. Order online and send fresh flowers, plants and gifts today.
-          </div>
+          </p>
         </div>
-
-        <div className="hero-right">
-  {categories.map((cat, index) => (
-    <div className="image-card" key={index}>
-      <img src={cat.image} alt={cat.title} />
-      <div className="overlay">
-        <h3>{cat.title}</h3>
-        <button>Shop Now</button>
       </div>
-    </div>
-  ))}
+<div className="hero-right">
+{categories.map((cat, index) => (
+  <div key={index} className={`category-pair ${index === 4 ? 'centered' : ''}`}>
+    {index % 2 === 0 ? (
+      <>
+        <div className="image-card">
+          <img src={cat.image} alt={cat.label} />
+        </div>
+        <div className="text-card">
+          <h4>{cat.label}</h4>
+          <Link to={cat.path} className="shop-now-btn">
+  Shop now →
+</Link>
+
+        </div>
+      </>
+    ) : (
+      <>
+        <div className="text-card">
+          <h4>{cat.label}</h4>
+          <Link to={cat.path} className="shop-now-btn">
+  Shop now →
+</Link>
+
+        </div>
+        <div className="image-card">
+          <img src={cat.image} alt={cat.label} />
+        </div>
+      </>
+    )}
+  </div>
+))}
+
 </div>
 
-    </div>
+
+
+
     </section>
-);
+  );
 };
 
 export default Hero;

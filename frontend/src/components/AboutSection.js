@@ -1,0 +1,28 @@
+import React from 'react';
+import './AboutSection.css';
+
+const AboutSection = () => {
+  return (
+    <section className="about-section">
+      {/* Left Column */}
+      <div className="about-left">
+        <h2>ABOUT US</h2>
+      </div>
+
+      {/* Right Column */}
+      <div className="about-right">
+        <h3>OUR STORY</h3>
+        <h2>Kyiv LuxeBouquets</h2>
+        <p>
+          Kyiv LuxeBouquets is a modern floral studio offering unique floral arrangements
+          and thoughtful gifts curated by passionate florists. We work with fresh flowers
+          to craft meaningful bouquets and provide same-day delivery throughout the city.
+          Celebrate moments, express emotions, and spread joy through the art of flowers.
+        </p>
+        <button>LEARN MORE</button>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;

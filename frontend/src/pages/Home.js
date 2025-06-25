@@ -1,14 +1,24 @@
 import React from "react";
 //import Navbar from "../components/Navbar";//
 import Hero from "../components/Hero";
-import CategoryGrid from "../components/CategoryGrid";
+import AboutSection from "../components/AboutSection";
+import WhyChooseUs from "../components/WhyChooseUs";
+import ContactFormSection from "../components/ContactFormSection";
+import ServiceSection from "../components/ServiceSection";
+import ReviewSection from "../components/ReviewSection";
+
 
 const Home = () => {
 return (
     <>
     {/*<Navbar />*/}
     <Hero />
-    <CategoryGrid />
+    <AboutSection />
+    <WhyChooseUs  />
+    <ContactFormSection />
+    <ServiceSection />
+    <ReviewSection />
+    
     </>
 );
 };
