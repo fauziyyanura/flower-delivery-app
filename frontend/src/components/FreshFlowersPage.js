@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import freshBanner from '../assets/freshBanner.png';
+
 import './FreshFlowersPage.css';
 
-// ✅ Moved outside the component
 const freshFlowerIds = [
   '67db3c72e2f589125d1b94ed',
   '67db3fbce2f589125d1b94ef',
@@ -27,8 +28,7 @@ const FreshFlowersPage = () => {
           axios.get(`https://flower-delivery-app.onrender.com/api/flowers/${id}`)
         );
         const responses = await Promise.all(requests);
-        const data = responses.map(res => res.data);
-        setFlowers(data);
+        setFlowers(responses.map(res => res.data));
       } catch (error) {
         console.error('Failed to fetch fresh flower items:', error);
       } finally {
@@ -40,21 +40,32 @@ const FreshFlowersPage = () => {
   }, []);
 
   return (
-    <section className="category-page">
-      <h1>Fresh Flowers</h1>
+    <section className="fresh-flowers-wrapper">
+      <h1 className="section-title">Fresh Flowers</h1>
+
       {loading ? (
-        <p>Loading...</p>
+        <p className="loading-text">Loading flowers...</p>
       ) : (
-        <div className="product-grid">
-          {flowers.map(flower => (
-            <div key={flower._id} className="product-card">
-              <img src={flower.image} alt={flower.name} />
-              <h3>{flower.name}</h3>
-              <p>₦{flower.price.toLocaleString()}</p>
-              <button>Add to Cart</button>
-            </div>
-          ))}
+        <>
+          <div className="banner-flower-wrapper">
+  <div className="banner-container">
+    <img src={freshBanner} alt="Fresh Flowers" className="banner-image" />
+  </div>
+
+  <div className="all-flowers-grid">
+    {flowers.map(flower => (
+      <div key={flower._id} className="flower-card">
+        <img src={flower.image} alt={flower.name} className="flower-image" />
+        <div className="flower-details">
+          <h3 className="flower-name">{flower.name}</h3>
+          <p className="flower-price">₦{flower.price.toLocaleString()}</p>
         </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+        </>
       )}
     </section>
   );
