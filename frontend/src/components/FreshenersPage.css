@@ -1,0 +1,85 @@
+.fresheners-wrapper {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #222;
+}
+
+/* --- Banner --- */
+
+.banner-flower-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.banner-container {
+  width: 100%;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* --- Product Grid --- */
+
+.all-flowers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.flower-card {
+  display: block;
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.flower-card:hover {
+  transform: translateY(-4px);
+}
+
+.flower-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.flower-details {
+  padding: 15px;
+  text-align: center;
+}
+
+.flower-name {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.flower-price {
+  font-weight: bold;
+  color: #9c27b0;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #888;
+  margin-top: 80px;
+}

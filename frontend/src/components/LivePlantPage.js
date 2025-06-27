@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import liveBanner from '../assets/flower-live.png'; // Replace with your actual banner image path
+import { Link } from 'react-router-dom'; 
+import liveBanner from '../assets/flower-live.png'; 
 import './LivePlantsPage.css';
 
 const livePlantIds = [
@@ -53,13 +54,17 @@ const LivePlantsPage = () => {
 
           <div className="all-flowers-grid">
             {plants.map(plant => (
-              <div key={plant._id} className="flower-card">
+              <Link
+                to={`/product/${plant._id}`}
+                key={plant._id}
+                className="flower-card"
+              >
                 <img src={plant.image} alt={plant.name} className="flower-image" />
                 <div className="flower-details">
                   <h3 className="flower-name">{plant.name}</h3>
                   <p className="flower-price">₦{plant.price.toLocaleString()}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

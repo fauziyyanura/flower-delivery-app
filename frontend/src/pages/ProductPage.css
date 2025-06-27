@@ -1,0 +1,165 @@
+.productpage-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  color: #333;
+}
+
+/* --- Product Section --- */
+
+.product-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.product-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 8px;
+  object-fit: cover;
+  height: auto;
+}
+
+.product-info {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-title {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.product-price {
+  color: #9c27b0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.product-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* --- Quantity & Add to Basket --- */
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.quantity-controls button {
+  padding: 6px 14px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.quantity-controls button:hover {
+  background-color: #ccc;
+}
+
+.quantity-controls span {
+  font-size: 1.1rem;
+  min-width: 30px;
+  text-align: center;
+}
+
+/*.add-to-basket {
+  background-color: #9c27b0;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.add-to-basket:hover {
+  background-color: #7b1fa2;
+}*/
+
+.add-to-basket {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 14px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  letter-spacing: 0.5px;
+}
+
+.add-to-basket:hover {
+  background-color: #222;
+}
+
+
+/* --- Related Section --- */
+
+.related-section {
+  margin-top: 80px;
+}
+
+.related-title {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.related-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.related-item {
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.related-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+  border-radius: 8px;
+}
+
+.related-item img:hover {
+  transform: scale(1.03);
+}
+
+/* --- Misc --- */
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #999;
+  margin-top: 100px;
+}
