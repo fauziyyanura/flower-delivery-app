@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'; // ✅ Step 1: Import Link
+import { Link } from 'react-router-dom';
 import driedBanner from '../assets/flower-dried.png';
 import './DriedFlowerPage.css';
 
@@ -56,10 +56,6 @@ const DriedFlowersPage = () => {
             {flowers.map(flower => (
               <Link to={`/product/${flower._id}`} key={flower._id} className="flower-card">
                 <img src={flower.image} alt={flower.name} className="flower-image" />
-                <div className="flower-details">
-                  <h3 className="flower-name">{flower.name}</h3>
-                  <p className="flower-price">₦{flower.price.toLocaleString()}</p>
-                </div>
               </Link>
             ))}
           </div>
