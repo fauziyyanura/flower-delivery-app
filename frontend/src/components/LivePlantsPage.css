@@ -1,9 +1,16 @@
-/* Prevent horizontal scroll */
+/* Prevent horizontal scroll across the whole page */
 body {
   overflow-x: hidden;
 }
 
-.live-plants-wrapper {
+/* Contain overflow within grid elements */
+.flower-grid,
+.content-layout {
+  overflow-x: hidden;
+}
+
+
+.liveplants-wrapper {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
@@ -18,7 +25,7 @@ body {
   color: #222;
 }
 
-.banner-flower-wrapper {
+.content-layout {
   display: grid;
   grid-template-columns: 600px 1fr;
   gap: 20px;
@@ -31,6 +38,7 @@ body {
   border-bottom: 1px solid #e0e0e0;
   border-radius: 12px;
   overflow: hidden;
+  align-items: flex-start;
 }
 
 .banner-image {
@@ -41,12 +49,19 @@ body {
   border-radius: 10px;
 }
 
-/* Grid of plant cards */
-.all-flowers-grid {
+/* Grid of flower cards*/ 
+.flower-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   align-items: start;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+  margin-top: 80px;
 }
 
 .flower-card {
@@ -57,7 +72,6 @@ body {
   background: none;
   box-sizing: border-box;
   overflow: hidden;
-  text-decoration: none;
 }
 
 .flower-image {
@@ -67,26 +81,4 @@ body {
   display: block;
 }
 
-/* Optional (only if you're keeping name & price) */
-.flower-details {
-  text-align: center;
-  margin-top: 10px;
-}
 
-.flower-name {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 6px;
-}
-
-.flower-price {
-  font-weight: bold;
-  color: #4caf50;
-}
-
-.loading-text {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #777;
-  margin-top: 80px;
-}

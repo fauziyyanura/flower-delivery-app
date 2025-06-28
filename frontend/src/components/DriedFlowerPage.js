@@ -22,7 +22,7 @@ const DriedFlowersPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchFlowersByIds = async () => {
+    const fetchFlowers = async () => {
       try {
         const responses = await Promise.all(
           driedFlowerIds.map(id =>
@@ -31,28 +31,28 @@ const DriedFlowersPage = () => {
         );
         setFlowers(responses.map(res => res.data));
       } catch (error) {
-        console.error('Failed to fetch dried flower items:', error);
+        console.error('Error fetching fresh flowers:', error);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchFlowersByIds();
+    fetchFlowers();
   }, []);
 
   return (
-    <section className="dried-flowers-wrapper">
+    <section className="driedflower-wrapper">
       <h1 className="section-title">Dried Flowers</h1>
 
       {loading ? (
-        <p className="loading-text">Loading flowers...</p>
+        <p className="loading-text">Loading dried flowers...</p>
       ) : (
-        <div className="banner-flower-wrapper">
+        <div className="content-layout">
           <div className="banner-container">
-            <img src={driedBanner} alt="Dried Flowers" className="banner-image" />
+            <img src={driedBanner} alt="Dried Flowers Banner" className="banner-image" />
           </div>
 
-          <div className="all-flowers-grid">
+          <div className="flower-grid">
             {flowers.map(flower => (
               <Link to={`/product/${flower._id}`} key={flower._id} className="flower-card">
                 <img src={flower.image} alt={flower.name} className="flower-image" />

@@ -122,12 +122,11 @@ return (
     
     <div className="bouquet-info-container-1">
         <div className="bouquet-info-content">
-        <h2>Discover Our</h2>
-        <h2>Beautiful Bouquets</h2>
+        <h2>Discover Our Beautiful Bouquets</h2>
         <p>
-            Explore our collection of exquisite bouquets and surprise your loved ones with the perfect gift.
+            Explore our collection of exquisite bouquets and surprise your loved ones with the perfect gift. Click the button below to start shopping
         </p>
-        <button onClick={handleLearnMoreClick} className="shop-abt-btn">Shop</button>
+        <button onClick={handleLearnMoreClick} className="shop-abt-btn">Shop Now</button>
         </div>
     </div>
 

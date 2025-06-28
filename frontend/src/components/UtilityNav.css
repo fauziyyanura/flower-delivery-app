@@ -1,110 +1,127 @@
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: "Playfair Display", serif;
-  color: #222;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #444;
-  font-weight: 500;
-}
-
-.nav-actions button {
-margin-left: 1rem;
-padding: 0.5rem 1rem;
-border: none;
-background-color: #ff5c8a;
-color: #fff;
-border-radius: 4px;
-cursor: pointer;
-font-weight: 500;
-}
-
-
-
-
-/*.utility-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 32px;
+.utility-nav {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
-  background-color: #fff;
-}
-
-.utility-left,
-.utility-right {
-  display: flex;
-}
-
-
-
-.utility-left a,
-.utility-right a,
-.utility-right .cart {
-  padding: 0 16px;
-  text-decoration: none;
-  color: #000;
+  background: #fff;
+  padding: 14px 24px;
   position: relative;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-
-/* Add vertical black divider between links 
-.utility-left a:not(:first-child),
-.utility-right a:not(:first-child),
-.utility-right .cart:not(:first-child) {
   border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
-.utility-left a:not(:first-child)::before,
-.utility-right a:not(:first-child)::before,
-.utility-right .cart:not(:first-child)::before {
-  content: "";
+.mobile-nav {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-icon,
+.shop-icon {
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+}
+
+/*.mobile-menu {
   position: absolute;
+  top: 60px;
   left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}*/
+
+/*.mobile-menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 220px; /* or whatever width you prefer 
+  background: #fff;
+  border-right: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+}*/
+
+/*.mobile-menu 1{
+  position: fixed;
   top: 0;
-  height: 100%;
-  width: 1px;
-  background-color: #000;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 60px 24px 24px;
+  flex-direction: column;
+}
+
+.mobile-menu a {
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-weight: 500;
 }*/
 
 
-.utility-nav {
+
+/*.mobile-menu a {
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}*/
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  z-index: 999;
+  padding: 80px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.menu-links a {
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu-socials {
+  display: flex;
+  gap: 16px;
+}
+
+
+.desktop-nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 14px 40px;
   background-color: #fff;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  
   font-weight: 500;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
 }
 
 .utility-left,
@@ -137,31 +154,38 @@ font-weight: 500;
   background-color: #000;
 }
 
-/* Add divider between left and right sections */
-.utility-right::before {
-  content: "";
-  height: 100%;
-  width: 1px;
-  background: #000;
-  margin-right: 20px;
+.icon-button {
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.2s ease;
 }
 
+.icon-button:hover {
+  transform: scale(1.1);
+}
 
-.cart {
-  border: none;
+.close-menu-icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   background: none;
-  font-size: 1.1rem;
+  border: none;
+  color: #000;
   cursor: pointer;
 }
 
 
-.navbar-wrapper {
-  display: block;
-}
 
-@media (max-width: 1023px) {
-  .navbar-wrapper {
+/* Responsive logic */
+@media (max-width: 991px) {
+  .desktop-nav {
     display: none;
   }
-}
 
+  .mobile-nav {
+    display: flex;
+  }
+}

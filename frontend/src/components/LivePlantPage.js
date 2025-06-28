@@ -17,49 +17,45 @@ const livePlantIds = [
   '685cb16c3c00c4412661b282'
 ];
 
-const LivePlantsPage = () => {
-  const [plants, setPlants] = useState([]);
+const LivePlantPage  = () => {
+  const [flowers, setFlowers] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchLivePlants = async () => {
+    const fetchFlowers = async () => {
       try {
         const responses = await Promise.all(
           livePlantIds.map(id =>
-            axios.get(`http://localhost:5000/api/flowers/${id}`)
+            axios.get(`https://flower-delivery-app.onrender.com/api/flowers/${id}`)
           )
         );
-        setPlants(responses.map(res => res.data));
+        setFlowers(responses.map(res => res.data));
       } catch (error) {
-        console.error('Failed to fetch live plants:', error);
+        console.error('Error fetching live plants:', error);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchLivePlants();
+    fetchFlowers();
   }, []);
 
   return (
-    <section className="live-plants-wrapper">
-      <h1 className="section-title">Live Plants</h1>
+    <section className="liveplants-wrapper">
+      <h1 className="section-title">Fresh Flowers</h1>
 
       {loading ? (
-        <p className="loading-text">Loading plants...</p>
+        <p className="loading-text">Loading live plants...</p>
       ) : (
-        <div className="banner-flower-wrapper">
+        <div className="content-layout">
           <div className="banner-container">
-            <img src={liveBanner} alt="Live Plants Banner" className="banner-image" />
+            <img src={liveBanner} alt="Live Plant Banner" className="banner-image" />
           </div>
 
-          <div className="all-flowers-grid">
-            {plants.map(plant => (
-              <Link
-                to={`/product/${plant._id}`}
-                key={plant._id}
-                className="flower-card"
-              >
-                <img src={plant.image} alt={plant.name} className="flower-image" />
+          <div className="flower-grid">
+            {flowers.map(flower => (
+              <Link to={`/product/${flower._id}`} key={flower._id} className="flower-card">
+                <img src={flower.image} alt={flower.name} className="flower-image" />
               </Link>
             ))}
           </div>
@@ -69,4 +65,4 @@ const LivePlantsPage = () => {
   );
 };
 
-export default LivePlantsPage;
+export default LivePlantPage;

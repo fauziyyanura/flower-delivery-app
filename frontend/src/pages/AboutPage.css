@@ -42,9 +42,7 @@ img, .about-image, .about-image-container {
   max-width: 800px;
   height: auto;
 }
-.about-image, .about-image-container {
-  margin-top: -20px;
-}
+
 /* Reverse layout for second row (text left, image right) */
 .bouquet-info-container:nth-of-type(1) {
   grid-column: 1;
@@ -55,4 +53,49 @@ img, .about-image, .about-image-container {
   grid-column: 2;
   grid-row:2;
 }
+
+.bouquet-info-container-1 {
+  background-color: #fff;
+  text-align: center;
+  padding: 80px 24px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.bouquet-info-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bouquet-info-content h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+  color: #121212;
+}
+
+.bouquet-info-content p {
+  font-size: 18px;
+  font-weight: 500px;
+  line-height: 140%;
+  color: #121212;
+  margin: 24px 0 40px;
+}
+
+.shop-abt-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 16px 50px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-abt-btn:hover {
+  background-color: #333;
+}
+
 

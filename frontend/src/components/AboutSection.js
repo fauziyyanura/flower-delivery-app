@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './AboutSection.css';
 
 const AboutSection = () => {
@@ -19,7 +21,10 @@ const AboutSection = () => {
           to craft meaningful bouquets and provide same-day delivery throughout the city.
           Celebrate moments, express emotions, and spread joy through the art of flowers.
         </p>
-        <button>LEARN MORE</button>
+        <Link to="/AboutPage">
+  <button>LEARN MORE</button>
+</Link>
+
       </div>
     </section>
   );

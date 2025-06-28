@@ -1,7 +1,19 @@
-.fresheners-wrapper {
-  padding: 40px 20px;
+/* Prevent horizontal scroll across the whole page */
+body {
+  overflow-x: hidden;
+}
+
+/* Contain overflow within grid elements */
+.flower-grid,
+.content-layout {
+  overflow-x: hidden;
+}
+
+
+.freshener-wrapper {
   max-width: 1200px;
-  margin: auto;
+  margin: 40px auto;
+  padding: 0 20px;
   font-family: 'Segoe UI', sans-serif;
   color: #333;
 }
@@ -13,73 +25,60 @@
   color: #222;
 }
 
-/* --- Banner --- */
-
-.banner-flower-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.content-layout {
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 .banner-container {
   width: 100%;
+  max-width: 660px;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  align-items: flex-start;
 }
 
 .banner-image {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
+  height: 100%;
   object-fit: cover;
-}
-
-/* --- Product Grid --- */
-
-.all-flowers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 30px;
-}
-
-.flower-card {
   display: block;
-  background: #f9f9f9;
   border-radius: 10px;
-  overflow: hidden;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.flower-card:hover {
-  transform: translateY(-4px);
-}
-
-.flower-image {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-bottom: 1px solid #eee;
-}
-
-.flower-details {
-  padding: 15px;
-  text-align: center;
-}
-
-.flower-name {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-.flower-price {
-  font-weight: bold;
-  color: #9c27b0;
+/* Grid of flower cards*/ 
+.flower-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: start;
 }
 
 .loading-text {
   text-align: center;
   font-size: 1.1rem;
-  color: #888;
+  color: #777;
   margin-top: 80px;
 }
+
+.flower-card {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.flower-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+

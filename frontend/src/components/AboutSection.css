@@ -12,6 +12,8 @@
   max-width: 250px;
   display: flex;
   align-items: flex-start;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 .about-left h2 {
@@ -27,6 +29,8 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  border-left: 1px solid #000;
+  transform: translateX(5%);
 }
 
 .about-right h3 {

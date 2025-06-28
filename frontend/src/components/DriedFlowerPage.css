@@ -1,31 +1,22 @@
-/* Prevent horizontal scroll */
+/* Prevent horizontal scroll across the whole page */
 body {
   overflow-x: hidden;
 }
 
-/*.dried-flowers-wrapper {
+/* Contain overflow within grid elements */
+.flower-grid,
+.content-layout {
+  overflow-x: hidden;
+}
+
+
+.driedflower-wrapper {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
   font-family: 'Segoe UI', sans-serif;
   color: #333;
-}*/
-
-.dried-flowers-wrapper {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
 }
-
-
-/*.dried-flowers-wrapper{
-    grid-column: 1 / 2; 
-    grid-row: 1; 
-    width: 100%;
-    height: auto; 
-
-
-}*/
 
 .section-title {
   font-size: 2rem;
@@ -34,20 +25,12 @@ body {
   color: #222;
 }
 
-/*.banner-flower-wrapper {
+.content-layout {
   display: grid;
   grid-template-columns: 600px 1fr;
   gap: 20px;
   align-items: flex-start;
-}*/
-
-.banner-flower-wrapper {
-  display: grid;
-  grid-template-columns: 580px 1fr;
-  gap: 20px;
-  align-items: flex-start;
 }
-
 
 .banner-container {
   width: 100%;
@@ -55,6 +38,7 @@ body {
   border-bottom: 1px solid #e0e0e0;
   border-radius: 12px;
   overflow: hidden;
+  align-items: flex-start;
 }
 
 .banner-image {
@@ -65,72 +49,12 @@ body {
   border-radius: 10px;
 }
 
-/* Dried flower grid 
-.all-flowers-grid {
+/* Grid of flower cards*/ 
+.flower-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   align-items: start;
-}*/
-
-.all-flowers-grid{
-    grid-column: 1 / 2; 
-    grid-row: 1; 
-    width: 100%;
-    height: auto; 
-
-}
-
-
-/*.flower-card {
-  width: 100%;
-  height: auto;
-  padding: 0;
-  border: none;
-  background: none;
-  box-sizing: border-box;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.flower-image {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}*/
-
-.flower-card {
-  width: 100%;
-  height: auto;
-  padding: 0;
-  border: none;
-  background: none;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.flower-image {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
-
-.flower-details {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.flower-name {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 6px;
-}
-
-.flower-price {
-  font-weight: bold;
-  color: #9c27b0;
 }
 
 .loading-text {
@@ -139,3 +63,22 @@ body {
   color: #777;
   margin-top: 80px;
 }
+
+.flower-card {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.flower-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+
