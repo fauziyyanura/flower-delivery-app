@@ -7,6 +7,7 @@ const flowerRoutes = require("./routes/flowerRoutes");
 const userRoutes = require("./routes/userRoutes");
 const User = require("./models/userModel");
 const fileUpload = require("express-fileupload");
+const paymentRoutes = require("./routes/paymentRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -59,6 +60,8 @@ app.get("/api/users", async (req, res) => {
       .json({ message: "Failed to fetch users", error: error.message });
   }
 });
+
+app.use("/api/payments", paymentRoutes);
 
 // Adding the /api/flower endpoint
 app.get("/api/flower", (req, res) => {
