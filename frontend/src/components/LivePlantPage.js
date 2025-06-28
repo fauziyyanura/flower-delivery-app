@@ -42,7 +42,7 @@ const LivePlantPage  = () => {
 
   return (
     <section className="liveplants-wrapper">
-      <h1 className="section-title">Fresh Flowers</h1>
+      <h1 className="section-title">Live Plants</h1>
 
       {loading ? (
         <p className="loading-text">Loading live plants...</p>
