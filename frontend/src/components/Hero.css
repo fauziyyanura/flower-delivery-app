@@ -27,18 +27,34 @@
   line-height: 1.6;
 }
 
-.florist-info {
+/*.florist-info {
   display: flex;
   align-items: flex-start;
   gap: 15px;
   margin-top: 30px;
+}*/
+
+.florist-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    border-top: 1px solid black;
+    padding-top: 10px;
+
 }
 
-.florist-info img {
+/*.florist-info img {
   width: 60px;
   height: 60px;
   object-fit: cover;
   border-radius: 50%;
+}*/
+
+.florist-info img{
+  width: 70%;
+    max-height: 150px;
+    object-fit: cover;
+
 }
 
 .florist-info p {

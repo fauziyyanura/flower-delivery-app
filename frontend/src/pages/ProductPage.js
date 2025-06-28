@@ -7,20 +7,18 @@ const ProductPage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const [related, setRelated] = useState([]);
+  //const [related, setRelated] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchProductAndFresheners = async () => {
+    const fetchProduct = async () => {
       try {
         // Fetch selected product
         const productRes = await axios.get(`https://flower-delivery-app.onrender.com/api/flowers/${id}`);
         setProduct(productRes.data);
 
-        // Fetch all products and filter for fresheners
-        const allRes = await axios.get('https://flower-delivery-app.onrender.com/api/flowers');
-        const fresheners = allRes.data.filter(item => item.category === 'Fresheners');
-        setRelated(fresheners.slice(0, 4));
+        
+
       } catch (error) {
         console.error('Error fetching product or related items:', error);
       } finally {
@@ -28,7 +26,7 @@ const ProductPage = () => {
       }
     };
 
-    fetchProductAndFresheners();
+    fetchProduct();
   }, [id]);
 
   const handleQuantityChange = (type) => {
@@ -67,13 +65,7 @@ const ProductPage = () => {
 
       <section className="related-section">
         <h2 className="related-title">You may also like...</h2>
-        <div className="related-grid">
-          {related.map(item => (
-            <div key={item._id} className="related-item">
-              <img src={item.image} alt={item.name} />
-            </div>
-          ))}
-        </div>
+        
       </section>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./signin.css"; // or rename to signup.css if clearer
+import "./signup.css"; // or rename to signup.css if clearer
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -41,7 +41,7 @@ const SignUp = () => {
         <input
           type="text"
           placeholder="Enter your username"
-          value={name}
+          value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
         />

@@ -25,14 +25,7 @@ const ServiceSection = () => {
       {/* Wedding & Event Decor Block */}
 
         <section className="event-hero">
-  <div className="event-overlay">
-    <h2>Wedding & Event Decor</h2>
-    <p>
-      Let our team of expert florists and designers create stunning, on-trend floral décor 
-      for your special day. Trust us to bring your vision to life.
-    </p>
-    <button>INQUIRE NOW</button>
-  </div>
+  
 </section>
     </>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import './ContactFormSection.css';
 import storefrontImg from '../assets/storefront.png'; // Replace with your actual image path
-import { FaInstagram, FaPinterestP, FaFacebookF, FaTwitter, FaTelegram } from 'react-icons/fa';
+//import { FaInstagram, FaPinterestP, FaFacebookF, FaTwitter, FaTelegram } from 'react-icons/fa';
 
 const ContactFormSection = () => {
   return (
@@ -36,17 +36,7 @@ const ContactFormSection = () => {
       {/* Right Column */}
       <div className="form-right">
         <img src={storefrontImg} alt="Kyiv LuxeBouquets storefront" />
-        <h3>Kyiv LuxeBouquets</h3>
-        <p>Arrangement by the best florists of the country</p>
-        <h4>Follow us</h4>
-        <div className="social-row">
-          <button className="social-button" aria-label="Instagram"><FaInstagram /></button>
-          <button className="social-button" aria-label="Pinterest"><FaPinterestP /></button>
-          <button className="social-button" aria-label="Facebook"><FaFacebookF /></button>
-          <button className="social-button" aria-label="Twitter"><FaTwitter /></button>
-          <button className="social-button" aria-label="Telegram"><FaTelegram /></button>
-
-        </div>
+        
       </div>
     </section>
   );
