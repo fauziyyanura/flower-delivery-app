@@ -73,7 +73,7 @@ const UtilityNav = () => {
       {/* Desktop Nav */}
       <div className="desktop-nav">
         <div className="utility-left">
-          <Link to="/product">Shop</Link>
+          <Link to="/products">Shop</Link>
           <Link to="/contact">Contact</Link>
         </div>
         <div className="utility-right">

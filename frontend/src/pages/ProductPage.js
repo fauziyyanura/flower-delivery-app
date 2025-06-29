@@ -7,20 +7,15 @@ const ProductPage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  //const [related, setRelated] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        // Fetch selected product
         const productRes = await axios.get(`https://flower-delivery-app.onrender.com/api/flowers/${id}`);
         setProduct(productRes.data);
-
-        
-
       } catch (error) {
-        console.error('Error fetching product or related items:', error);
+        console.error('Error fetching product:', error);
       } finally {
         setLoading(false);
       }
@@ -36,6 +31,23 @@ const ProductPage = () => {
   };
 
   const handleAddToBasket = () => {
+    const currentCart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    const existingIndex = currentCart.findIndex(item => item._id === product._id);
+
+    if (existingIndex !== -1) {
+      currentCart[existingIndex].quantity += quantity;
+    } else {
+      currentCart.push({
+        _id: product._id,
+        name: product.name,
+        imageUrl: product.image,
+        price: product.price,
+        quantity: quantity,
+      });
+    }
+
+    localStorage.setItem("cartItems", JSON.stringify(currentCart));
     alert(`Added ${quantity} of ${product.name} to basket!`);
   };
 
@@ -65,7 +77,6 @@ const ProductPage = () => {
 
       <section className="related-section">
         <h2 className="related-title">You may also like...</h2>
-        
       </section>
     </div>
   );

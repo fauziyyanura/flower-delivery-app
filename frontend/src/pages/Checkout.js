@@ -1,7 +1,7 @@
 // src/pages/Checkout.js
 import React from "react";
 import { FaLock } from "react-icons/fa";
-//import "./Checkout.css";
+import "./Checkout.css";
 
 const Checkout = ({ cartItems, total }) => {
   const handlePayment = async () => {

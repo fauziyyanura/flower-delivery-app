@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from "react";
 //import Checkout from "../Checkout";
-import Checkout from "../pages/Checkout_temp";
-
-//import "./Cart.css";
+//import '../App.css';
+import Checkout from "../pages/Checkout";
+import "./Cart.css";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
