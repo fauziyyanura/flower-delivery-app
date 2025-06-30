@@ -5,6 +5,7 @@ import googleLogo from '../assets/google-logo.svg'; // Replace with your actual 
 
 const ReviewSection = () => {
   return (
+    <div className="section">
     <section className="review-section">
       <img src={googleLogo} alt="Google logo" className="google-logo" />
       <h2 className="review-heading">REVIEWS</h2>
@@ -27,6 +28,7 @@ const ReviewSection = () => {
         <FaChevronRight className="arrow" />
     </div>
     </section>
+    </div>
 );
 };
 

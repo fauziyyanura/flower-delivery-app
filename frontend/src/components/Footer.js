@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
         </div>
 
- <div className="footer-col">
+<div className="footer-col">
     <h4>Contact Us</h4>
           <p>15/4 Khreshchatyk Street, Kyiv</p>
           <p>+380980099777</p>

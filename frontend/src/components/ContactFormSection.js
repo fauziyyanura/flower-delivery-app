@@ -5,6 +5,8 @@ import storefrontImg from '../assets/storefront.png'; // Replace with your actua
 
 const ContactFormSection = () => {
   return (
+
+    <div className="section">
         <section className="contact-form-section">
       {/* Left Column */}
       <div className="form-left">
@@ -39,6 +41,7 @@ const ContactFormSection = () => {
         
       </div>
     </section>
+    </div>
   );
 };
 

@@ -5,3 +5,14 @@ body {
 }
 
 
+.page-frame {
+  border: 1px solid #121212;
+  border-radius: 0;
+  margin: 1.2rem;
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+

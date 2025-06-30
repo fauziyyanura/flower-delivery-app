@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+.section {
+  padding: 4rem 2rem;
+  border-bottom: 1px solid #eee;
+}
+
 .service-left {
   flex: 1;
   min-width: 280px;
@@ -45,6 +50,7 @@
   font-size: 1.1rem;
   color: #555;
   line-height: 1.7;
+  margin-top: -20px;
 }
 
 .service-right button {

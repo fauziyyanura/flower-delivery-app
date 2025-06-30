@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Optional: give each section a soft divider */
+.section {
+border-width: 1px;
+border-width: 0px, 0px, 1px, 1px;
+border-style: solid;
+border-color: #121212;
+}
+
+.section:last-child {
+border-bottom: none;
+}
+
+.split-shell {
+  position: relative;
+}
+
+/*.split-shell::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #000;
+  z-index: 1;
+}*/
+
+.split-shell::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #000;
+  z-index: 1;
+}
+
+
+@media (max-width:768px) {
+    .home-shell{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px;
+    }
+}
+
+@media (max-width: 1024px) {
+  .split-shell::before {
+    display: none;
+  }
+}
+
+

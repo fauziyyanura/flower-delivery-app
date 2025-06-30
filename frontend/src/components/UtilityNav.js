@@ -73,11 +73,11 @@ const UtilityNav = () => {
       {/* Desktop Nav */}
       <div className="desktop-nav">
         <div className="utility-left">
-          <Link to="/products">Shop</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/products" className="nav-box">Shop</Link>
+          <Link to="/contact" className="nav-box">Contact</Link>
         </div>
         <div className="utility-right">
-          <Link to="/signin">Sign In</Link>
+          <Link to="/signin" className="nav-box">Sign In</Link>
           <Link to="/cart" className="cart">Cart 🛒</Link>
         </div>
       </div>

@@ -5,6 +5,7 @@ import './AboutSection.css';
 
 const AboutSection = () => {
   return (
+    <div className="section">
     <section className="about-section">
       {/* Left Column */}
       <div className="about-left">
@@ -27,6 +28,7 @@ const AboutSection = () => {
 
       </div>
     </section>
+    </div>
   );
 };
 

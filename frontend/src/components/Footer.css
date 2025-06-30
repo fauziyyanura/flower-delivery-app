@@ -1,18 +1,59 @@
 
+
 .footer {
-  background-color: #f8f8f8;
-  padding: 60px 40px;
-  font-family: sans-serif;
-  color: #333;
+  border: 1.5px solid #000;  /* Full boxed border */
+  background-color: #fff;
+  padding: 3rem 2rem;
 }
 
-.footer-columns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start; /* makes sure all columns align at the top */
-  gap: 40px;
+/*.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
 }
+
+.footer-col {
+  padding: 0 1.2rem;
+}
+
+/* Vertical lines between columns 
+.footer-col:not(:last-child) {
+  position: relative;
+}
+
+.footer-col:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background-color: #000;
+}*/
+
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+
+.footer-col {
+  position: relative;
+  padding: 0 1.5rem;
+}
+
+/* Add connecting vertical dividers between columns */
+.footer-col:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background-color: #000;
+}
+
 
 .footer-col,
 .reminder-col {
@@ -23,6 +64,7 @@
 
 .footer-col {
   min-width: 200px;
+  border-left-width: 1px;
 }
 
 .footer-col h4 {
@@ -120,6 +162,7 @@
 
   .footer-col {
     min-width: 250px;
+    border-left-width: 1px;
   }
 
   .reminder-col {

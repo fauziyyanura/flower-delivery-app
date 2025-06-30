@@ -6,6 +6,7 @@ const ServiceSection = () => {
   return (
     <>
       {/* Flower Subscription Block */}
+      <div className="section">
       <section className="service-section">
         <div className="service-left">
           <img src={subscriptionImg} alt="Flower subscription visual" />
@@ -27,6 +28,7 @@ const ServiceSection = () => {
         <section className="event-hero">
   
 </section>
+</div>
     </>
   );
 };

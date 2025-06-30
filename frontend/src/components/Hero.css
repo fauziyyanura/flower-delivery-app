@@ -27,13 +27,6 @@
   line-height: 1.6;
 }
 
-/*.florist-info {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  margin-top: 30px;
-}*/
-
 .florist-info {
     display: flex;
     align-items: center;
@@ -43,20 +36,11 @@
     border-bottom: 1px solid #000;
 }
 
-
-/*.florist-info img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-}*/
-
 .florist-info img{
   width: 70%;
     max-height: 150px;
     object-fit: cover;
     border-right: 1px solid #000;
-
 }
 
 .florist-info p {
@@ -121,8 +105,9 @@
   flex-direction: column;
   gap: 20px;
   flex: 1;
+  margin-left: 1%;
   border-collapse: collapse;
-  border-left: 1px solid #000;
+  
 }
 
 .category-pair {
