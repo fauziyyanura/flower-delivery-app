@@ -77,7 +77,7 @@ return (
         <h2 className="section-title">Our Story</h2>
         <h3 className="passion-title">Our Founder's Passion</h3>
         <p className="passion-description">
-        Kyiv LuxeBouquets was founded in 2010 by Natalia Zelinska with the goal of bringing unique and exquisite bouquets to the people of Kyiv.
+        Kyiv LuxeBouquets was founded in 2010 by Natalia Zelinska with the goal of bringing unique and exquisite bouquets to the people of Kyiv. Natalia has always had a passion for flowers and design, and his vision was to create a local floral studio that would specialize in the creation and delivery of fresh, beautiful and distinctive bouquets.
         </p>
     </div>
     <div className="carfted-con-gr">
