@@ -9,7 +9,7 @@ const AboutSection = () => {
     <section className="about-section">
       {/* Left Column */}
       <div className="about-left">
-        <h2>ABOUT US</h2>
+        <h2>About us</h2>
       </div>
 
       {/* Right Column */}

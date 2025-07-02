@@ -152,9 +152,20 @@
     flex-direction: column;
   }
 
+  .phone-form button{
+    margin-left: 10%;
+  }
+
   .form-left input,
   .form-left button {
     width: 100%;
+  }
+  .form-left input{
+    margin-right: 10%;
+  }
+
+  .form-right img{
+    margin-left: -5%;
   }
 }
 

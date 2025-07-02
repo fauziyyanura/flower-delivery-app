@@ -11,7 +11,7 @@ const ContactFormSection = () => {
       {/* Left Column */}
       <div className="form-left">
   <h2>To Contact Us</h2>
-  <p className="form-description">Leave your number and we’ll get back to you shortly</p>
+  <p className="form-description">Leave your number and we'll get back to you shortly</p>
   
   <form className="phone-form">
   <input type="tel" placeholder="+380 XX XXX XX XX" required />

@@ -26,19 +26,17 @@
   max-width: 700px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .why-feature{
-  margin-top: -15%;
   margin-left: 20%;
+  border-bottom: 1px solid #121212;
 }
 .why-feature h3 {
   font-size: 38px;
   color: #333;
   font-weight: 600;
-  margin-bottom: 30px;
-  margin-top: 20%;
 }
 
 .why-feature p {
@@ -60,33 +58,12 @@
   .why-right {
     gap: 25px;
   }
-}
 
-@media (max-width: 1024px) {
-  /*.why-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    padding: 60px 20px;
+  .why-feature h3{
+    margin-left: -7%;
   }
+  .why-feature{
+    transform: translateX(-10%);
 
-  .feature-block {
-    text-align: left;
-  }
-
-  .feature-block h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #222;
-  }
-
-  .feature-block p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-  }*/
-
-  .why-right{
-    margin-top: -30%;
   }
 }

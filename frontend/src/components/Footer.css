@@ -6,7 +6,7 @@
   padding: 3rem 2rem;
 }
 
-/*.footer-columns {
+.footer-columns {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
@@ -32,18 +32,53 @@
 }*/
 
 
-.footer-columns {
+
+/*.footer-columns {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  position: relative;
+  gap: 2rem;
+  align-items: stretch; /* Ensures all columns match height 
 }
+
+/*.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /*position: relative;
+  gap:2rem;
+}*/
+
+.footer-col {
+  padding: 16px;
+}
+
+
+/* Add connecting vertical dividers between columns 
+.footer-col:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background-color: #000;
+}*/
+
+/*.footer-col:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background-color: #000;
+  height: 100%; /* Ensures full height 
+}*/
 
 .footer-col {
   position: relative;
   padding: 0 1.5rem;
 }
 
-/* Add connecting vertical dividers between columns */
 .footer-col:not(:last-child)::after {
   content: '';
   position: absolute;
@@ -53,6 +88,7 @@
   width: 1px;
   background-color: #000;
 }
+
 
 
 .footer-col,
@@ -134,23 +170,77 @@
   background-color: #e76691;
 }
 
-@media (max-width: 768px) {
-  .footer-columns {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .reminder-form {
-    flex-direction: column;
-  }
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columns */
+  gap: 2rem;
+  position: relative;
 }
+
 
 @media (max-width: 768px) {
   .footer-columns {
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 40px 20px;
+  }
+
+  .footer-col {
+    min-width: 0;
+  }
+
+  .footer-columns .footer-col:nth-child(1),
+  .footer-columns .footer-col:nth-child(2),
+  .footer-columns .footer-col:nth-child(3),
+  .footer-columns .footer-col:nth-child(4) {
+    grid-column: auto;
+  }
+
+  .reminder-col {
+    grid-column: auto;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-col,
+  .reminder-col {
+    flex: none; /* Prevent flex overrides */
   }
 }
+
+/*@media (max-width: 768px) {
+  .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .footer-col, .footer-colreminder-col {
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+        border-image: initial;
+        padding: 30px;
+    }
+
+    .footer-col {
+      margin-bottom: 0px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+        border-image: initial;
+        padding: 30px;
+    }
+}*/
+    
+
+
+
+
 
 @media (max-width: 1024px) {
   .footer-columns {

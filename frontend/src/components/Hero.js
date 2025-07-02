@@ -24,9 +24,9 @@ const Hero = () => {
     <section className="hero-section">
       {/* Left Column */}
       <div className="hero-left">
-        <h1>Kyiv LuxeBouquets®</h1>
+        <h1> <strong>Kyiv <br /> LuxeBouquets<sup>®</sup></strong></h1>
         <p className="subheading">
-          Discover Uniquely Crafted Bouquets and Gifts for Any Occasion: Spread Joy with Our Online Flower Delivery Service.
+          Discover Uniquely Crafted Bouquets and Gifts for Any Occasion: Spread Joy with Our <i> Online Flower Delivery Service</i>.
         </p>
 
         <div className="florist-info">
