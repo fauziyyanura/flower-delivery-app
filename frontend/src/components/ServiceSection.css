@@ -70,6 +70,16 @@
   background-color: #e76691;
 }
 
+.event-hero {
+  background-image: url('../assets/event-decor.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
 /*.service-block {
   display: flex;
   flex-wrap: wrap;
@@ -138,7 +148,7 @@
   }
 }
 
-.event-hero {
+/*.event-hero {
   background-image: url('../assets/event-decor.png'); 
   background-size: cover;
   background-position: center;
@@ -152,7 +162,7 @@
 }
 
 .event-overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* Optional: darken the image slightly for contrast */
+  background-color: rgba(0, 0, 0, 0.4); /* Optional: darken the image slightly for contrast 
   padding: 40px;
   max-width: 800px;
   color: white;
@@ -184,7 +194,7 @@
 
 .event-overlay button:hover {
   background-color: #e76691;
-}
+}*/
 
 @media (max-width: 768px) {
   .event-hero {
@@ -254,7 +264,7 @@
     background-color: #e76691;
   }
 
-  .event-hero {
+  /*.event-hero {
     position: relative;
     padding: 60px 20px;
     background-size: cover;
@@ -293,5 +303,5 @@
 
   .event-overlay button:hover {
     background-color: #e76691;
-  }
+  }*/
 }

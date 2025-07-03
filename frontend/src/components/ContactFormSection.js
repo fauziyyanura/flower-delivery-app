@@ -1,6 +1,6 @@
 import React from 'react';
 import './ContactFormSection.css';
-import storefrontImg from '../assets/storefront.png'; // Replace with your actual image path
+import storefrontImg from '../assets/storefront.png'; 
 //import { FaInstagram, FaPinterestP, FaFacebookF, FaTwitter, FaTelegram } from 'react-icons/fa';
 
 const ContactFormSection = () => {
