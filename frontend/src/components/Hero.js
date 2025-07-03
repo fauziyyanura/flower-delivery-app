@@ -18,15 +18,17 @@ const categories = [
   { image: flowerFreshener, label: 'Fresheners', path: '/shop/fresheners' },
 ];
 
+// Define the layout pattern manually to match your Figma
+const layoutPattern = ['text-first', 'image-first', 'text-first', 'image-first', 'text-first'];
 
 const Hero = () => {
   return (
     <section className="hero-section">
       {/* Left Column */}
       <div className="hero-left">
-        <h1> <strong>Kyiv <br /> LuxeBouquets<sup>®</sup></strong></h1>
+        <h1><strong>Kyiv <br /> LuxeBouquets<sup>®</sup></strong></h1>
         <p className="subheading">
-          Discover Uniquely Crafted Bouquets and Gifts for Any Occasion: Spread Joy with Our <i> Online Flower Delivery Service</i>.
+          Discover Uniquely Crafted Bouquets and Gifts for Any Occasion: Spread Joy with Our <i>Online Flower Delivery Service</i>.
         </p>
 
         <div className="florist-info">
@@ -36,44 +38,35 @@ const Hero = () => {
           </p>
         </div>
       </div>
-<div className="hero-right">
-{categories.map((cat, index) => (
-  <div key={index} className={`category-pair ${index === 4 ? 'centered' : ''}`}>
-    {index % 2 === 0 ? (
-      <>
-        <div className="image-card">
-          <img src={cat.image} alt={cat.label} />
-        </div>
-        <div className="text-card">
-          <h4>{cat.label}</h4>
-          <Link to={cat.path} className="shop-now-btn">
-  Shop now →
-</Link>
 
-        </div>
-      </>
-    ) : (
-      <>
-        <div className="text-card">
-          <h4>{cat.label}</h4>
-          <Link to={cat.path} className="shop-now-btn">
-  Shop now →
-</Link>
-
-        </div>
-        <div className="image-card">
-          <img src={cat.image} alt={cat.label} />
-        </div>
-      </>
-    )}
-  </div>
-))}
-
-</div>
-
-
-
-
+      {/* Right Column */}
+      <div className="hero-right">
+        {categories.map((cat, index) => (
+          <div key={index} className={`category-pair ${index === 4 ? 'centered' : ''}`}>
+            {layoutPattern[index] === 'text-first' ? (
+              <>
+                <div className="text-card">
+                  <h4>{cat.label}</h4>
+                  <Link to={cat.path} className="shop-now-btn">Shop now →</Link>
+                </div>
+                <div className="image-card">
+                  <img src={cat.image} alt={cat.label} />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="image-card">
+                  <img src={cat.image} alt={cat.label} />
+                </div>
+                <div className="text-card">
+                  <h4>{cat.label}</h4>
+                  <Link to={cat.path} className="shop-now-btn">Shop now →</Link>
+                </div>
+              </>
+            )}
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

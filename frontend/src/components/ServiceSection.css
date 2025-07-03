@@ -55,10 +55,10 @@
 
 .service-right button {
   padding: 12px 24px;
-  background-color: #f97da7;
-  color: white;
-  border: none;
-  border-radius: 25px;
+  background-color: white;
+  color: #121212;
+  border: 1px solid #121212;
+  border-radius: 5px;
   font-weight: 600;
   letter-spacing: 1px;
   cursor: pointer;

@@ -17,7 +17,7 @@ const ServiceSection = () => {
           <h3>Flower Subscriptions</h3>
           <p>
             Experience the convenience and savings of regular flower deliveries with our
-            flexible subscription service – up to 30% more profitable than one-time purchases.
+            flexible subscription service - up to 30% more profitable than one-time purchases.
           </p>
           <button>SUBSCRIBE NOW</button>
         </div>

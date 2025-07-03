@@ -49,40 +49,43 @@
 }
 
 /* RIGHT COLUMN */
-
-
-
-
-
 .hero-right {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  /*gap: 20px;*/
   flex: 1;
   margin-left: 1%;
   border-collapse: collapse;
+  margin-bottom: -5%;
+  margin-right: -3%;
+  margin-top: -5%;
   
 }
 
 .category-pair {
   display: flex;
   align-items: stretch;
-  gap: 15px;
+  /*gap: 15px;*/
 }
 
 .image-card,
 .text-card {
   flex: 1;
-  padding: 15px;
-  border-radius: 10px;
+  padding: 0px;
+  margin: 0px;
+  /*border-radius: 10px;
   background-color: #f7f7f7;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);*/
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 360px;
+  text-align: center;
+  border-bottom: 1px solid #121212;
+  border-left: 1px solid #121212;
+  border-top: 1px solid #121212;
+  /*border-right: 1px solid #121212;*/
 }
-
-
 
 .image-card img{
   width: 100%;
@@ -92,9 +95,23 @@
 }
 
 .text-card {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  color: #000;
+  display: flex;
   flex-direction: column;
-  text-align: left;
+  justify-content: center;
+  gap: 0.5rem;
+border-right: 1px solid #121212;
+border-bottom: 1px solid #121212;
+
 }
+
+
 
 .text-card h4 {
   margin-bottom: 5px;
@@ -104,7 +121,7 @@
 
 .text-card p {
   font-size: 0.9rem;
-  color: #f97da7;
+  /*color: #f97da7;*/
   font-weight: 500;
 }
 
@@ -113,51 +130,7 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 768px) {
-  /*.hero-section {
-    flex-direction: column;
-    padding: 40px 20px;
-    gap: 2rem;
-  }
-
-  .hero-left {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .florist-info {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  .florist-info img {
-    width: 100%;
-    max-height: 200px;
-    border-right: none;
-    border-bottom: 1px solid #000;
-    padding-bottom: 10px;
-  }*/
-
-
   .hero-section {
     display: flex;
     flex-direction: column; /* ← This stacks left above right */
@@ -170,15 +143,6 @@
     width: 100%;
   }
 
-  /*.hero-left::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: #121212;
-  margin: 30px 0;
-}*/
-
-
 .hero-left::after {
   content: "";
   display: block;
@@ -190,8 +154,6 @@
   left: 50%;
   transform: translateX(-38%);
 }
-
-
 
   .florist-info {
     display: flex;
@@ -219,57 +181,10 @@
     line-height: 1.5;
   }
 
-
-
-
-
   .hero-right {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-left: 0;
-  }
-
-  .category-pair {
-    display: flex;
-    flex-direction: row; /* ← Key: Respect original order */
-    align-items: stretch;
-    gap: 15px;
-  }
-
-  .image-card,
-  .text-card {
-    flex: 1;
-    padding: 10px;
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .image-card img {
-    width: 100%;
-    max-height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-  .text-card {
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-  }
-
-  .shop-now-btn {
-    display: inline-block;
-    margin-top: 5px;
-    font-size: 0.95rem;
-    padding: 6px 12px;
-    background-color: #f97da7;
-    color: white;
-    border-radius: 4px;
-    text-decoration: none;
   }
 }
