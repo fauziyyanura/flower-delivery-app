@@ -127,7 +127,14 @@ margin: 0 auto;
     align-items: center;
     justify-content: center;
     width: 100%;
-    border: 1px solid black;
+    width: 500px
+}
+.parlour-image-container {
+margin-left: 20%;
+}
+
+.pink-image-container, .about-image-container-1 {
+  margin-left: 20%;
 }
 
 .about-image-1{

@@ -75,66 +75,13 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 500px;
+  max-width: 100%;
+  height: 700px;
   position: relative;
+  margin: -5% -9% -5.3% -2%;
 }
 
-/*.service-block {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 60px 40px;
-  background-color: #fdfdfd;
-  gap: 3rem;
-  align-items: center;
-}
 
-.service-block:nth-child(even) .service-left {
-  order: 2;
-}
-
-.service-block img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.service-block .service-right {
-  flex: 1;
-  min-width: 280px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.service-block .service-right h3 {
-  font-size: 2rem;
-  color: #222;
-  font-weight: 600;
-}
-
-.service-block .service-right p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.7;
-}
-
-.service-block .service-right button {
-  padding: 12px 24px;
-  background-color: #f97da7;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  align-self: flex-start;
-}
-
-.service-block .service-right button:hover {
-  background-color: #e76691;
-}*/
 
 
 @media (max-width: 768px) {
@@ -148,11 +95,7 @@
   }
 }
 
-/*.event-hero {
-  background-image: url('../assets/event-decor.png'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.event-hero {
   width: 100%;
   height: 500px;
   position: relative;
@@ -161,7 +104,7 @@
   justify-content: center;
 }
 
-.event-overlay {
+/*8.event-overlay {
   background-color: rgba(0, 0, 0, 0.4); /* Optional: darken the image slightly for contrast 
   padding: 40px;
   max-width: 800px;
@@ -198,11 +141,11 @@
 
 @media (max-width: 768px) {
   .event-hero {
-    height: auto;
-    padding: 40px 20px;
+    height: 500px;
+    margin-left: -8%;
   }
 
-  .event-overlay {
+  /*.event-overlay {
     padding: 20px;
   }
 
@@ -212,7 +155,7 @@
 
   .event-overlay p {
     font-size: 1rem;
-  }
+  }*/
 }
 
 @media (max-width: 1024px) {
