@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-columns">
         {/* Column 1 */}
-        <div className="footer-colreminder-col">
+        <div className="reminder-col">
           <p>
             Remember to offer beautiful flowers from KYIV LuxeBouquets Valentines Day,
             Mothers Day, Christmas... Reminds you seven days before. No spam or sharing your address.

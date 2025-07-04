@@ -1,7 +1,7 @@
 import React from 'react';
 import './ReviewSection.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import googleLogo from '../assets/google-logo.svg'; // Replace with your actual path
+import googleLogo from '../assets/google-logo.svg'; 
 
 const ReviewSection = () => {
   return (

@@ -31,7 +31,7 @@ app.use(cors());
 app.use(express.json()); // Parses JSON bodies
 app.use(
   fileUpload({
-    // ADD THIS MIDDLEWARE for file uploads
+    // ADDED THIS MIDDLEWARE for file uploads
     useTempFiles: true, // Use temporary files to store uploaded files
     tempFileDir: "/tmp/", // Directory for temporary files
   })

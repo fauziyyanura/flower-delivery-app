@@ -1,6 +1,6 @@
 import React from "react";
 //import Navbar from "../components/Navbar";//
-import './Home.css'; // or whatever file the CSS lives in
+import './Home.css'; 
 
 import Hero from "../components/Hero";
 import AboutSection from "../components/AboutSection";
