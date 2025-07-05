@@ -1,190 +1,61 @@
-/* Prevent horizontal scroll across the whole page */
-body {
-  overflow-x: hidden;
+.banner-container{
+    margin: 0 auto;
 }
-
-/* Contain overflow within grid elements */
-.flower-grid,
-.content-layout {
-  overflow-x: hidden;
-}
-
-
-.freshflower-wrapper {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  text-align: center;
-  color: #222;
-}
-
-/*.content-layout {
-  display: grid;
-  grid-template-columns: 600px 1fr;
-  gap: 20px;
-  align-items: flex-start;
-}*/
-
-.content-layout {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-}
-
-/* Banner on left, grid on right */
 .banner-container {
-  width: 600px;
-  flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
-
-.flower-grid {
-  flex: 1;
-}
-
-
-/*.banner-container {
-  width: 100%;
-  max-width: 660px;
-  border-bottom: 1px solid #e0e0e0;
-  border-radius: 12px;
-  overflow: hidden;
-  align-items: flex-start;
-}*/
 
 .banner-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 10px;
+    width: 100%;
 }
 
-/* Grid of flower cards
-.flower-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  align-items: start;
-}*/
-
-.loading-text {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #777;
-  margin-top: 80px;
+.flower-image{
+    height: 400px;
+    width: 100%;
 }
-
-.flower-card {
-  width: 100%;
-  height: auto;
-  padding: 0;
-  border: none;
-  background: none;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
 .flower-image {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
+    border: 1px solid #ddd;
+    object-fit: cover;
 }
 
 
-@media (max-width: 375px) {
-  .content-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-  }
-
-  .banner-container {
-    width: 100%;
-    max-width: none;
-  }
-
-  .banner-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  .flower-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    width: 100%;
-    padding: 0 1rem;
-  }
-
-  .flower-card {
-    width: 100%;
-  }
-
-  .flower-image {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-  }
+@media (min-width: 768px) {
+    .flower-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-
-@media (max-width: 768px) {
-  .content-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-  }
-
-  .banner-container {
-    width: 100%;
-    max-width: none;
-  }
-
-  .banner-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  .flower-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    width: 100%;
-    padding: 0 1.5rem;
-  }
-
-  .flower-card {
-    width: 100%;
-  }
-
-  .flower-image {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-  }
+@media (min-width: 1024px) {
+    .freshflower-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
 }
 
-@media (max-width: 1024px) {
-  .content-layout {
-    flex-direction: column;
-    align-items: center;
-  }
+@media (min-width: 1024px) {
+    .banner-container {
+        grid-column: 1 / 2;
+        grid-row: 1;
+        height: auto;
+        width: 100%;
+    }
 }
 
+@media (min-width: 1024px) {
+    .banner-image {
+        width: 100%;
+    }
+}
 
-
+@media (min-width: 1024px) {
+    .flower-grid {
+        display: grid;
+        grid-column: 2 / 3;
+        grid-row: 1 / span 2;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
