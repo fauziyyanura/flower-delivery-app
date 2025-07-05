@@ -160,65 +160,33 @@ border-right: 1px solid #121212;
   }
 }
 
-/*@media (max-width: 768px) {
-  .footer-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(2, auto);
-    }
-
-    .footer-col, .footer-colreminder-col {
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgb(0, 0, 0);
-        border-image: initial;
-        padding: 30px;
-    }
-
-    .footer-col {
-      margin-bottom: 0px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgb(0, 0, 0);
-        border-image: initial;
-        padding: 30px;
-    }
-}*/
-    
-
-
-
-
-
-/*@media (max-width: 1024px) {
+@media (max-width: 375px) {
   .footer-columns {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    padding: 40px 20px;
-  }
-
-  .footer-col {
-    min-width: 250px;
-    border-left-width: 1px;
-  }
-
-  .reminder-col {
-    grid-column: span 2;
-    text-align: center;
-  }
-
-  .footer-social {
-    margin-top: 20px;
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    font-size: 1.4rem;
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .footer-col,
-.reminder-col{
-  flex: 2;
+  .reminder-col {
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .reminder-form input,
+  .reminder-form button {
+    width: 100%;
+  }
+
+  .footer-social {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer-col:not(:last-child)::after {
+    display: none; /* Remove vertical dividers */
+  }
 }
-}*/
+
 

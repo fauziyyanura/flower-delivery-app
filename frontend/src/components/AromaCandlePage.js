@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import aromaBanner from '../assets/flower-candle.png'; 
+import { Link } from 'react-router-dom'; 
+import aromaBanner from '../assets/flower-candle.png';
 import './AromaCandlePage.css';
 
 const aromaCandleIds = [
@@ -53,13 +54,14 @@ const AromaCandlePage = () => {
 
           <div className="all-flowers-grid">
             {candles.map(candle => (
-              <div key={candle._id} className="flower-card">
+              <Link
+                to={`/product/${candle._id}`}
+                key={candle._id}
+                className="flower-card"
+              >
                 <img src={candle.image} alt={candle.name} className="flower-image" />
-                <div className="flower-details">
-                  <h3 className="flower-name">{candle.name}</h3>
-                  <p className="flower-price">₦{candle.price.toLocaleString()}</p>
-                </div>
-              </div>
+                
+              </Link>
             ))}
           </div>
         </div>

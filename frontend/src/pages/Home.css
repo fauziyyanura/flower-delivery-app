@@ -1,10 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-/* Optional: give each section a soft divider */
 .section {
 border-width: 1px;
 border-width: 0px, 0px, 1px, 1px;
@@ -12,15 +5,33 @@ border-style: solid;
 border-color: #121212;
 }
 
+
+
 .section:last-child {
 border-bottom: none;
 }
 
-.split-shell {
+/*.home-shell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 1.2rem;
+  box-sizing: border-box;
+}*/
+
+.home-shell {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.2rem;
+  box-sizing: border-box;
+}
+
+.vertical-slice {
   position: relative;
 }
 
-/*.split-shell::before {
+.vertical-slice::before {
   content: '';
   position: absolute;
   top: 0;
@@ -29,8 +40,36 @@ border-bottom: none;
   width: 1px;
   background-color: #000;
   z-index: 1;
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+  .home-shell {
+    padding: 1.5rem 0.75rem;
+  }
+}
+
+
+
+
+
+/* Tablet 
+@media (max-width: 768px) {
+  .home-shell {
+    padding: 0 0.75rem;
+  }
 }*/
 
+/* Split-shell (first 3 sections with divider) */
+.split-shell {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Divider line */
 .split-shell::before {
   content: '';
   position: absolute;
@@ -42,20 +81,25 @@ border-bottom: none;
   z-index: 1;
 }
 
-
-@media (max-width:768px) {
-    .home-shell{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px;
-    }
-}
-
+/* Hide divider for smaller screens */
 @media (max-width: 1024px) {
   .split-shell::before {
     display: none;
   }
 }
 
+@media (max-width: 1024px) {
+  .vertical-slice::before {
+    display: none;
+  }
+}
 
+
+@media (max-width: 768px) {
+  .split-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 0.75rem;
+  }
+}

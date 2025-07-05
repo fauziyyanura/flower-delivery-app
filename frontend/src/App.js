@@ -26,7 +26,6 @@ function App() {
       <UtilityNav />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* Other pages */}
         <Route path="/shop/fresh-flowers" element={<FreshFlowersPage />} />
         <Route path="/shop/dried-flowers" element={<DriedFlowersPage />} />
         <Route path="/shop/live-plants" element={<LivePlantsPage />}  />

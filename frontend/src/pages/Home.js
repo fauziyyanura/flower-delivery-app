@@ -14,8 +14,8 @@ const Home = () => {
 return (
     <>
     {/*<Navbar />*/}
-    <div className="home-shell">
-    <div className="split-shell">
+    < div className="home-shell">
+    <div className="vertical-slice">
     <Hero />
     <AboutSection />
     <WhyChooseUs  />

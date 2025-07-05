@@ -227,7 +227,7 @@ margin-left: 20%;
 
 .about-image {
   width: 100%;
-  max-width: 650px; /* or however large the Figma shows */
+  max-width: 600px; /* or however large the Figma shows */
   height: auto;
   object-fit: cover;
   display: block;

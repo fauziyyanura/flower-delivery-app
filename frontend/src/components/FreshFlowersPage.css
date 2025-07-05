@@ -25,21 +25,39 @@ body {
   color: #222;
 }
 
-.content-layout {
+/*.content-layout {
   display: grid;
   grid-template-columns: 600px 1fr;
   gap: 20px;
   align-items: flex-start;
+}*/
+
+.content-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
 }
 
+/* Banner on left, grid on right */
 .banner-container {
+  width: 600px;
+  flex-shrink: 0;
+}
+
+.flower-grid {
+  flex: 1;
+}
+
+
+/*.banner-container {
   width: 100%;
   max-width: 660px;
   border-bottom: 1px solid #e0e0e0;
   border-radius: 12px;
   overflow: hidden;
   align-items: flex-start;
-}
+}*/
 
 .banner-image {
   width: 100%;
@@ -49,13 +67,13 @@ body {
   border-radius: 10px;
 }
 
-/* Grid of flower cards*/ 
+/* Grid of flower cards
 .flower-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   align-items: start;
-}
+}*/
 
 .loading-text {
   text-align: center;
@@ -158,6 +176,13 @@ body {
     width: 100%;
     object-fit: cover;
     border-radius: 8px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content-layout {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
