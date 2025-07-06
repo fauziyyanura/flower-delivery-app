@@ -5,19 +5,9 @@ border-style: solid;
 border-color: #121212;
 }
 
-
-
 .section:last-child {
 border-bottom: none;
 }
-
-/*.home-shell {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 0 1.2rem;
-  box-sizing: border-box;
-}*/
 
 .home-shell {
   width: 100%;
@@ -49,17 +39,6 @@ border-bottom: none;
     padding: 1.5rem 0.75rem;
   }
 }
-
-
-
-
-
-/* Tablet 
-@media (max-width: 768px) {
-  .home-shell {
-    padding: 0 0.75rem;
-  }
-}*/
 
 /* Split-shell (first 3 sections with divider) */
 .split-shell {

@@ -1,61 +1,83 @@
-.banner-container{
-    margin: 0 auto;
+/* FreshFlowersPage.css */
+
+/* 🌸 Base Styles */
+.freshflower-wrapper {
+  padding: 2rem 1rem;
+  background-color: #fff8f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #d6336c;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* 🌼 Content Layout */
+.content-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🌺 Banner */
 .banner-container {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 2rem;
 }
 
 .banner-image {
-    width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.flower-image{
-    height: 400px;
-    width: 100%;
+/* 🌹 Flower Grid */
+.flower-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
 }
+
+.flower-card {
+  display: block;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.flower-card:hover {
+  transform: translateY(-4px);
+}
+
 .flower-image {
-    border: 1px solid #ddd;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-
-@media (min-width: 768px) {
-    .flower-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+/* 📱 Responsive Media Queries */
+@media (min-width: 600px) {
+  .flower-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media (min-width: 1024px) {
-    .freshflower-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-    }
-}
-
-@media (min-width: 1024px) {
-    .banner-container {
-        grid-column: 1 / 2;
-        grid-row: 1;
-        height: auto;
-        width: 100%;
-    }
-}
-
-@media (min-width: 1024px) {
-    .banner-image {
-        width: 100%;
-    }
-}
-
-@media (min-width: 1024px) {
-    .flower-grid {
-        display: grid;
-        grid-column: 2 / 3;
-        grid-row: 1 / span 2;
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media (min-width: 900px) {
+  .flower-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

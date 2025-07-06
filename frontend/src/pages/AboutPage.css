@@ -1,7 +1,7 @@
-.section {
+/*.section {
   padding: 4rem 2rem;
   border-bottom: 2px solid #eee;
-}
+}*/
 
 .section:last-child {
   border-bottom: none;

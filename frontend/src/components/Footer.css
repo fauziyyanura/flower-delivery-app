@@ -1,61 +1,21 @@
+/* Footer.css */
 
-
+/* 🌑 Base Footer Styles */
 .footer {
-  border: 1.5px solid #000;  /* Full boxed border */
-  background-color: #fff;
-  padding: 3rem 2rem;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-columns {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  position: relative;
-}
-
-.footer-col {
-  padding: 0 1.2rem;
-}
-
-
-
-.footer-col {
-  position: relative;
-  padding: 0 1.5rem;
-}
-
-.footer-col:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 1px;
-  background-color: #000;
-}
-
-
-
-.footer-col,
-.reminder-col {
-  flex: 1;
-  min-width: 220px;
-}
-
-
-.footer-col {
-  min-width: 200px;
-  border-left-width: 1px;
-}
-
-.reminder-col{
-border-right: 1px solid #121212;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
 .footer-col h4 {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  color: #222;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #333;
 }
 
 .footer-col ul {
@@ -64,129 +24,110 @@ border-right: 1px solid #121212;
   margin: 0;
 }
 
-.footer-col li {
-  margin-bottom: 10px;
-  font-size: 0.95rem;
+.footer-col ul li {
+  margin-bottom: 0.5rem;
   color: #555;
   cursor: pointer;
 }
 
-.footer-col li:hover {
-  color: #f97da7;
+.footer-col ul li:hover {
+  text-decoration: underline;
 }
 
-/* Reminder column specific */
 .reminder-col p {
-  font-size: 0.95rem;
-  margin-bottom: 15px;
-  color: #555;
-  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #444;
 }
-
-.reminder-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
 
 .reminder-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.5rem;
 }
 
 .reminder-form input {
-  padding: 10px 16px;
+  padding: 0.6rem;
   border: 1px solid #ccc;
-  border-radius: 25px;
-  font-size: 0.95rem;
+  border-radius: 4px;
 }
 
 .reminder-form button {
-  padding: 10px 20px;
-  background-color: black;
-  color: white;
+  padding: 0.6rem;
+  background-color: #000;
+  color: #fff;
   border: none;
-  border-radius: 25px;
-  font-weight: 600;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.reminder-form button:hover {
-  background-color: #e76691;
+.footer-social {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: #333;
 }
 
-.footer-columns {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columns */
-  gap: 2rem;
-  position: relative;
+/* 📱 Mobile: 1 column per row */
+@media (max-width: 599px) {
+  .footer-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    border-top: 1px solid #000;
+  }
 }
 
+/* 📲 Tablet: 2 columns per row with middle and row borders */
+@media (min-width: 600px) and (max-width: 768px) {
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid #000;
+    border-bottom: none;
+    gap: 2rem;
+    position: relative;
+  }
 
-@media (max-width: 768px) {
+  .footer-columns::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+  transform: translateY(-50%);
+  }
+
+  .footer-col:nth-child(odd),
+  .reminder-col {
+    border-bottom: none;
+    border-right: 1px solid #ccc;
+    padding-right: 1rem;
+  }
+
+  .footer-col:nth-child(even) {
+    padding-left: 1rem;
+  }
+}
+
+/* 💻 Desktop: 4 columns in one row with vertical dividers */
+@media (min-width: 900px) {
   .footer-columns {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /*gap: 2rem;
-    padding: 40px 20px;*/
-  }
-
-  .footer-col {
-    min-width: 0;
-  }
-
-  .footer-columns .footer-col:nth-child(1),
-  .footer-columns .footer-col:nth-child(2),
-  .footer-columns .footer-col:nth-child(3),
-  .footer-columns .footer-col:nth-child(4) {
-    grid-column: auto;
-  }
-
-  .reminder-col {
-    grid-column: auto;
-    text-align: center;
-  }
-
-  .footer-social {
-    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #000;
+    gap: 0; /* No gap so borders align cleanly */
   }
 
   .footer-col,
   .reminder-col {
-    flex: none; /* Prevent flex overrides */
-  }
-}
-
-@media (max-width: 375px) {
-  .footer-columns {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .footer-col,
-  .reminder-col {
-    width: 100%;
+    border-right: 1px solid #ccc;
     padding: 0 1rem;
-    text-align: center;
   }
 
-  .reminder-form input,
-  .reminder-form button {
-    width: 100%;
-  }
-
-  .footer-social {
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .footer-col:not(:last-child)::after {
-    display: none; /* Remove vertical dividers */
+  /* Remove right border from the last column */
+  .footer-columns > :last-child {
+    border-right: none;
   }
 }
-
-

@@ -13,7 +13,6 @@
 
 .products-grid {
   display: grid;
-  /*grid-template-columns: repeat(auto-fit, minmax(230px, 2 1fr));*/
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
@@ -61,9 +60,23 @@
   border-radius: 5px;
   cursor: pointer;
   font-weight: 500;
-  transition: background 0.3s ease;
 }
 
 .product-card button:hover {
   background-color: #7a554b;
+}
+
+
+/*  Mobile: 1 product per row */
+@media (max-width: 599px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet: 2 products per row */
+@media (min-width: 600px) and (max-width: 899px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
