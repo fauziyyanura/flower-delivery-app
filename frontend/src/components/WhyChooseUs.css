@@ -2,7 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 18rem;
-  padding: 60px 40px;
+  border-top: 1px solid #121212;
+  /*padding: 60px 40px;*/
   background-color: #fff;
 }
 

@@ -16,7 +16,7 @@ const handleLearnMoreClick = () => {
 };
 
 return (
-
+    
     <div className="our-story">
     <div className="con-gr-about">
     <section>

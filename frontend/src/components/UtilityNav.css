@@ -1,199 +1,106 @@
+/* UtilityNav.css */
 
-
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
 .utility-nav {
-  border-bottom: 1px solid #000;
-  background: #fff;
-  padding: 14px 24px;
+  width: 100%;
   position: relative;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
+  z-index: 10;
+  font-family: sans-serif;
 }
 
+/* MOBILE & TABLET NAV */
 .mobile-nav {
-  display: none;
+  display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
 }
 
 .menu-icon,
 .shop-icon {
   background: none;
   border: none;
-  color: #000;
   cursor: pointer;
 }
 
-
-/* HIDE mobile nav + mobile menu on desktop by default */
-.mobile-nav,
+/* Slide-out menu */
 .mobile-menu {
-  display: none;
-}
-.menu-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100vh;
+  background: #f9f9f9;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  justify-content: space-between;
 }
 
 .menu-links a {
-  font-size: 24px;
-  color: #000;
+  display: block;
+  margin-bottom: 1rem;
+  color: #333;
   text-decoration: none;
-  font-weight: 600;
+  font-size: 1rem;
+}
+
+.close-menu-icon {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .menu-socials {
   display: flex;
-  gap: 16px;
-}
-
-
-.desktop-nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 40px;
-  background-color: #fff;
-  
-  font-weight: 500;
-}
-
-.utility-left,
-.utility-right {
-  display: flex;
-  align-items: center;
-}
-
-.utility-left a,
-.utility-right a,
-.utility-right .cart {
-  padding: 0 20px;
-  text-decoration: none;
-  color: #000;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-/* Full-height vertical divider */
-.utility-left a:not(:first-child)::before,
-.utility-right a:not(:first-child)::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 1px;
-  background-color: #000;
+  justify-content: space-around;
+  margin-top: 2rem;
 }
 
 .icon-button {
   background: none;
   border: none;
-  color: #000;
-  cursor: pointer;
-  padding: 8px;
-  transition: transform 0.2s ease;
-}
-
-.icon-button:hover {
-  transform: scale(1.1);
-}
-
-.close-menu-icon {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  background: none;
-  border: none;
-  color: #000;
   cursor: pointer;
 }
 
+/* DESKTOP NAV */
+.desktop-nav {
+  display: none;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.utility-left,
+.utility-right {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-box,
+.cart {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+}
 
 
-@media (max-width: 1024px) {
-  .mobile-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    position: relative;
-  }
 
-  .menu-left,
-  .menu-right {
-    flex: 1;
-  }
-
-  .menu-left {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .menu-right {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .desktop-nav {
+/* RESPONSIVE RULES */
+@media (min-width: 1024px) {
+  .mobile-nav,
+  .mobile-menu {
     display: none;
   }
 
-
-}
-
-
-
-
-@media (max-width: 768px) {
-  .utility-nav {
-    align-items: center;
-    background: #fff;
-    border-bottom: 1px solid #ccc;
+  .desktop-nav {
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
+    align-items: center;
   }
-
-  /*.utility-nav {
-    width: 100vw;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 10px 16px;
-    border-left: none;
-    border-right: none;
-    justify-content: space-between;
-  }*/
-
-.mobile-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  padding: 10px 16px;
-  width: 100%;
-}
-
-.menu-icon,
-.shop-icon {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/*.utility-nav {
-    border-left: none;
-    border-right: none;
-  }*/
-
 
 }
 

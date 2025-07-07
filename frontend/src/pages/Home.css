@@ -1,8 +1,26 @@
-.section {
+/*.section {
 border-width: 1px;
-border-width: 0px, 0px, 1px, 1px;
+/*border-width: 0px, 0px, 1px, 1px;
+border-top: 1px solid #121212;
 border-style: solid;
 border-color: #121212;
+}*/
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  border-top: 1px solid #121212;
+ /* width: 100vw; /* Full viewport width */
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  border-top: 1px solid #121212;
 }
 
 .section:last-child {

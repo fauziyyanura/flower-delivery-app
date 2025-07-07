@@ -22,7 +22,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <div className="section">
+    
     <section className="why-section">
       {/* Left Column */}
       <div className="why-left">
@@ -39,7 +39,6 @@ const WhyChooseUs = () => {
         ))}
       </div>
     </section>
-    </div>
   );
 };
 

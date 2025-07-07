@@ -1,8 +1,25 @@
-.about-section {
+/*.about-section {
   display: flex;
   flex-wrap: wrap;
   padding: 60px 40px;
   background-color: #ffffff;
+  gap: 20rem;
+}*/
+
+.section {
+  border-top: 1px solid #121212;
+  padding: 60px 0; /* Remove left/right padding */
+  background-color: #ffffff;
+  gap: 20rem;
+  box-sizing: border-box;
+}
+
+.about-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20rem;
 }
 
@@ -102,7 +119,7 @@
   .about-left {
     order: 1;
     text-align: center;
-    margin-bottom: -40%;
+    margin-bottom: -90%;
     margin-top: -10%;
   }
 

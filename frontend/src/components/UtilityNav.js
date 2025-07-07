@@ -78,7 +78,7 @@ const UtilityNav = () => {
         </div>
         <div className="utility-right">
           <Link to="/signin" className="nav-box">Sign In</Link>
-          <Link to="/cart" className="cart">Cart 🛒</Link>
+          <Link to="/cart" className="cart">Cart </Link>
         </div>
       </div>
     </nav>

@@ -27,6 +27,7 @@ const AboutSection = () => {
 </Link>
 
       </div>
+
     </section>
     </div>
   );
