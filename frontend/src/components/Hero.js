@@ -18,7 +18,7 @@ const categories = [
   { image: flowerFreshener, label: 'Fresheners', path: '/shop/fresheners' },
 ];
 
-// Define the layout pattern manually to match your Figma
+// This define the layout pattern manually to match the Figma
 const layoutPattern = ['text-first', 'image-first', 'text-first', 'image-first', 'text-first'];
 
 const Hero = () => {

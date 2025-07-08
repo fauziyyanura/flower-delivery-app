@@ -1,83 +1,173 @@
-/* FreshFlowersPage.css */
+/* Prevent horizontal scroll across the whole page */
+body {
+  overflow-x: hidden;
+}
 
-/* 🌸 Base Styles */
+/* Contain overflow within grid elements */
+.flower-grid,
+.content-layout {
+  overflow-x: hidden;
+}
+
+
 .freshflower-wrapper {
-  padding: 2rem 1rem;
-  background-color: #fff8f5;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
 }
 
 .section-title {
-  text-align: center;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #d6336c;
-}
-
-.loading-text {
+  margin-bottom: 30px;
   text-align: center;
-  font-size: 1.2rem;
-  color: #555;
+  color: #222;
 }
 
-/* 🌼 Content Layout */
 .content-layout {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
 }
 
-/* 🌺 Banner */
+/* Banner on left, grid on right */
 .banner-container {
-  width: 100%;
-  max-width: 1000px;
-  margin-bottom: 2rem;
+  width: 600px;
+  flex-shrink: 0;
+}
+
+.flower-grid {
+  flex: 1;
 }
 
 .banner-image {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
 }
 
-/* 🌹 Flower Grid */
+/* Grid of flower cards
 .flower-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  width: 100%;
-  max-width: 1000px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: start;
+}*/
+
+.loading-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+  margin-top: 80px;
 }
 
 .flower-card {
-  display: block;
-  background-color: #fff;
-  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  box-sizing: border-box;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-}
-
-.flower-card:hover {
-  transform: translateY(-4px);
 }
 
 .flower-image {
   width: 100%;
   height: auto;
+  object-fit: contain;
   display: block;
 }
 
-/* 📱 Responsive Media Queries */
-@media (min-width: 600px) {
+
+@media (max-width: 375px) {
+  .content-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .banner-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
   .flower-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .flower-card {
+    width: 100%;
+  }
+
+  .flower-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
   }
 }
 
-@media (min-width: 900px) {
+
+@media (max-width: 768px) {
+  .content-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .banner-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
   .flower-grid {
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .flower-card {
+    width: 100%;
+  }
+
+  .flower-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
   }
 }
+
+@media (max-width: 1024px) {
+  .content-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+

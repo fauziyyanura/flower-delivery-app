@@ -1,19 +1,78 @@
-/* 🌼 Base Wrapper */
+/*body, html {
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+
+/* 🌼 Base Wrapper 
+.page-frame {
+  max-width: 1440px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #121212;
+  background-color: #ffffff;
+  min-height: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+
+}*/
+
 .page-frame {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 1.5rem;
   border: 1px solid #121212;
+  /*border-radius: 12px;*/
   background-color: #ffffff;
+  /*box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-sizing: border-box;
-  width: 100%;
-  overflow-x: hidden;
-
 }
+
+
+
+
+/*.page-frame {
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}*/
+
+
+
+
+/*.page-frame {
+  width: 100vw; /* Full width of the viewport 
+  height: 100vh; /* Full height of the viewport 
+  box-sizing: border-box; /* Ensures padding & border are included in width/height 
+  border: 1px solid #000; /* Customize border style as needed 
+  overflow: auto; /* Keeps content scrollable 
+  margin: 0; /* Avoid unintended spacing 
+  padding: 0;
+}
+
+.page-frame {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}*/
+
+
 
 /* 📱 Small Devices: Phones */
 @media (max-width: 599px) {

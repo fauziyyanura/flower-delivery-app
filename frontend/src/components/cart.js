@@ -1,7 +1,5 @@
 
 import React, { useState, useEffect } from "react";
-//import Checkout from "../Checkout";
-//import '../App.css';
 import Checkout from "../pages/Checkout";
 import "./Cart.css";
 

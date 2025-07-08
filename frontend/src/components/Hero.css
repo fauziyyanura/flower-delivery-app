@@ -52,12 +52,12 @@
 .hero-right {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  margin-left: 1%;
+  flex: none;
+  margin-left: 50%;
   border-collapse: collapse;
   margin-bottom: -5%;
   margin-right: -3%;
-  margin-top: -5%;
+  margin-top: -50%;
 }
 
 .category-pair {
@@ -68,6 +68,8 @@
 .image-card,
 .text-card {
   flex: 1;
+  max-width: 400px;
+  width: 300px;
   padding: 0px;
   margin: 0px;
   display: flex;
