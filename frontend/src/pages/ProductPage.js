@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './ProductPage.css';
 
 const ProductPage = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(true);
@@ -61,7 +63,9 @@ const ProductPage = () => {
     }
 
     localStorage.setItem("cartItems", JSON.stringify(currentCart));
+
     alert(`Added ${quantity} of ${product.name} to basket!`);
+    navigate('/cart'); // 🔁 Redirect to cart after confirmation
   };
 
   if (loading) return <div className="loading">Loading product...</div>;

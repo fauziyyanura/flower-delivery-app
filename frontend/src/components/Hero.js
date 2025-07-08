@@ -23,6 +23,8 @@ const layoutPattern = ['text-first', 'image-first', 'text-first', 'image-first',
 
 const Hero = () => {
   return (
+    <div className='home-a'>
+
     <section className="hero-section">
       {/* Left Column */}
       <div className="hero-left">
@@ -32,8 +34,8 @@ const Hero = () => {
         </p>
 
         <div className="florist-info">
-          <img src={floristImg} alt="Florist" />
-          <p>
+          <img src={floristImg} alt="Florist" className='flo-image' />
+          <p className='flow-text'>
             Experience the joy of giving with our modern floral studio. Order online and send fresh flowers, plants and gifts today.
           </p>
         </div>
@@ -68,6 +70,7 @@ const Hero = () => {
         ))}
       </div>
     </section>
+    </div>
   );
 };
 
