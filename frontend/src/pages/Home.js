@@ -13,17 +13,13 @@ import ReviewSection from "../components/ReviewSection";
 const Home = () => {
 return (
     <>
-    {/*<Navbar />*/}
-    < div className="home-shell">
-    <div className="vertical-slice">
+    
     <Hero />
     <AboutSection />
     <WhyChooseUs  />
     <ContactFormSection />
-    </div>
     <ServiceSection />
     <ReviewSection />
-    </div>
     </>
 );
 };
