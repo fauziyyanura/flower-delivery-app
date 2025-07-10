@@ -5,31 +5,28 @@ import './AboutSection.css';
 
 const AboutSection = () => {
   return (
-    <div className="section">
-    <section className="about-section">
-      {/* Left Column */}
-      <div className="about-left">
-        <h2>About us</h2>
-      </div>
+<div className="about">
+      <section className="about-header">
+        <h1>About us</h1>
+      </section>
 
-      {/* Right Column */}
-      <div className="about-right">
-        <h3>OUR STORY</h3>
-        <h2>Kyiv LuxeBouquets</h2>
+      <section className="about-content">
+        <p className="story-title">OUR STORY</p>
+        <h3>Kyiv LuxeBouquets</h3>
         <p>
-          Kyiv LuxeBouquets is a modern floral studio offering unique floral arrangements
-          and thoughtful gifts curated by passionate florists. We work with fresh flowers
-          to craft meaningful bouquets and provide same-day delivery throughout the city.
-          Celebrate moments, express emotions, and spread joy through the art of flowers.
+          We are a modern local floral studio, which specializes in the design
+          and delivery of unique bouquets. We have the best florists who
+          carefully select each look. Our studio cooperates directly with farms
+          for growing different flowers, so we always have fresh flowers...
         </p>
+        <div className="Learn-more">
         <Link to="/AboutPage">
   <button>LEARN MORE</button>
 </Link>
-
-      </div>
-
-    </section>
+</div>
+      </section>
     </div>
+
   );
 };
 

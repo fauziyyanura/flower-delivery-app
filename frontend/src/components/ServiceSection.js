@@ -1,12 +1,14 @@
 import React from 'react';
 import './ServiceSection.css';
+import eventDecorImg from '../assets/event-decor.png';
+
 import subscriptionImg from '../assets/subscription.png';
 
 const ServiceSection = () => {
   return (
     <>
       {/* Flower Subscription Block */}
-      <div className="section">
+      <div className="sub-section">
       <section className="service-section">
         <div className="service-left">
           <img src={subscriptionImg} alt="Flower subscription visual" />
@@ -26,7 +28,7 @@ const ServiceSection = () => {
       {/* Wedding & Event Decor Block */}
 
         <section className="event-hero">
-  
+       <img src={eventDecorImg} alt="Wedding & Event decor visual" />
 </section>
 </div>
     </>

@@ -1,14 +1,14 @@
-/*.about-section {
+/* /*.about-section {
   display: flex;
   flex-wrap: wrap;
   padding: 60px 40px;
   background-color: #ffffff;
   gap: 20rem;
-}*/
+}
 
 .section {
   border-top: 1px solid #121212;
-  padding: 60px 0; /* Remove left/right padding */
+  padding: 60px 0; /* Remove left/right padding 
   background-color: #ffffff;
   gap: 20rem;
   box-sizing: border-box;
@@ -144,3 +144,116 @@ margin-left: -60%;
 margin-left: -8%;
   }
 }
+ 
+
+ .about-section {
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid black;
+
+}
+
+ .about-left {
+    background-color: white;
+    padding: 20px;
+    border-top: 1px solid black;
+
+    text-align: center;
+  }
+  
+  .about-left h1 {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+   .about-right {
+    padding: 20px;
+  }
+  .about-right h3 {
+    font-size: 16px;
+    line-height: 1.6;
+
+  }*/
+
+
+   .about {
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid black;
+  }
+  
+  .about-header {
+    background-color: white;
+    padding: 20px;
+    border-top: 1px solid black;
+
+    text-align: center;
+  }
+  
+  .about-header h1 {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .about-content {
+    padding: 20px;
+  }
+
+   .story-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .about-content h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .Learn-more button {
+    width: 50%;
+    padding: 12px;
+    border: 2px solid black;
+    background: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+  }
+
+  @media (min-width:1024px) {
+     .about{
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+    }
+    .about-header{
+      border: 1px solid black; 
+
+    }
+    .why-choose-us{
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+    }
+    .title {
+      border: 1px solid black; 
+
+    }
+    .title h2{
+      font-size: 35px;
+
+  }
+}
+  
+
+
+
+
+

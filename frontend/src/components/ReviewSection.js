@@ -6,7 +6,6 @@ import googleLogo from '../assets/google-logo.svg';
 const ReviewSection = () => {
   return (
     <div className="section">
-    <div className="section">
     <section className="review-section">
       <img src={googleLogo} alt="Google logo" className="google-logo" />
       <h2 className="review-heading">REVIEWS</h2>
@@ -16,10 +15,10 @@ const ReviewSection = () => {
 
         <div className="review-content">
           <p className="quote top-line">
-  “Ordered flowers online and they were the best bouquet! Impressed everyone around.”
+  “Ordered flowers online and they were the best bouquet! Impressed everyone around.
 </p>
 <p className="quote bottom-line">
-  Highly recommend this flower shop!
+  Highly recommend this flower shop!"
 </p>
 
           <p className="author">Ronald Richards, via Google Reviews</p>
@@ -29,7 +28,6 @@ const ReviewSection = () => {
         <FaChevronRight className="arrow" />
     </div>
     </section>
-    </div>
     </div>
 );
 };
