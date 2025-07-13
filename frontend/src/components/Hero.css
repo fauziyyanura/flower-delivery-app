@@ -123,9 +123,9 @@
       grid-template-columns: 1fr 1fr; 
       grid-template-rows: repeat(2, auto);
     }
-    .empty-card{
+    /*.empty-card{
       border: 1px solid black; 
 
-    }
+    }*/
 
   }

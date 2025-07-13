@@ -22,7 +22,7 @@ const ProductList = () => {
           <div key={flower._id} className="product-card">
             <img src={flower.image} alt={flower.name} />
             <h3>{flower.name}</h3>
-            <p>₦{flower.price.toLocaleString()}</p>
+            <p> ${flower.price.toLocaleString()}</p>
             <Link to={`/product/${flower._id}`}>
               <button>View</button>
             </Link>

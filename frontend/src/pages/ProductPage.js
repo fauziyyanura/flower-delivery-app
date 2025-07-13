@@ -77,7 +77,7 @@ const ProductPage = () => {
         <img src={product.image} alt={product.name} className="product-image" />
         <div className="product-info">
           <h1 className="product-title">{product.name}</h1>
-          <p className="product-price">₦{product.price.toLocaleString()}</p>
+          <p className="product-price"> ${product.price.toLocaleString()}</p>
           <p className="product-desc">{product.description}</p>
 
           <div className="quantity-controls">
