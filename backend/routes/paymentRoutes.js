@@ -45,8 +45,8 @@ try {
     line_items,
     mode: "payment",
     success_url:
-        "https://flower-delivery-app-fontend-client.onrender.com/payment-success?session_id={CHECKOUT_SESSION_ID}",
-    cancel_url: "https://flower-delivery-app-fontend-client.onrender.com/Home",
+        "https://flower-delivery-app-frontend-9foi.onrender.com/payment-success?session_id={CHECKOUT_SESSION_ID}",
+    cancel_url: "https://flower-delivery-app-frontend-9foi.onrender.com/Home",
     });
 
     console.log("✅ Stripe session created:", session.id);
@@ -77,4 +77,4 @@ try {
 });
 
 
-module.exports = router;
+module.exports=router;

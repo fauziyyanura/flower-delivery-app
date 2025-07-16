@@ -1,4 +1,3 @@
-// src/pages/Checkout.js
 import React from "react";
 import { FaLock } from "react-icons/fa";
 import "./Checkout.css";
@@ -11,7 +10,7 @@ const Checkout = ({ cartItems, total }) => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/payments/create-checkout-session", {
+      const response = await fetch("https://flower-delivery-app.onrender.com/api/payments/create-checkout-session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ cartItems }),

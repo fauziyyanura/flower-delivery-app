@@ -27,9 +27,7 @@ function AddFlowers() {
     e.preventDefault();
     const data = new FormData();
     Object.keys(formData).forEach((key) => data.append(key, formData[key]));
-      //fetch("https://your-deployed-backend-url/api/flowers", ...)
-      //http://localhost:5000/api/flowers
-      //`${process.env.REACT_APP_API_URL}/api/flowers`
+      
     fetch(`${process.env.REACT_APP_API_URL}/api/flowers`, {
       method: "POST",
       body: data,
