@@ -24,8 +24,9 @@ try {
     payment_method_types: ["card"],
     mode: "payment",
     line_items,
-    success_url: "http://localhost:3000/success",
-    cancel_url: "http://localhost:3000/cancel",
+    // success_url: "https://flower-delivery-app-frontend-9foi.onrender.com/success",
+    success_url: "https://your-frontend-domain.com/success?session_id={CHECKOUT_SESSION_ID}",
+    cancel_url: "https://flower-delivery-app-frontend-9foi.onrender.com/Home",
     });
 
     res.json({ url: session.url });
