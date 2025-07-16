@@ -9,34 +9,13 @@ const Checkout = ({ cartItems, total }) => {
       return;
     }
 
-    // Convert cartItems into Stripe line_items format
-    const line_items = cartItems
-      .filter(
-        (item) =>
-          item.name &&
-          item.imageUrl &&
-          typeof item.price === "number" &&
-          !isNaN(item.price)
-      )
-      .map((item) => ({
-        price_data: {
-          currency: "usd",
-          product_data: {
-            name: item.name,
-            images: [item.imageUrl],
-          },
-          unit_amount: Math.round(item.price * 100), // Convert to cents
-        },
-        quantity: item.quantity || 1,
-      }));
-
     try {
       const response = await fetch(
         "https://flower-delivery-app.onrender.com/api/payments/create-checkout-session",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ line_items }),
+          body: JSON.stringify({ cartItems }), // ✅ send raw cartItems
         }
       );
 
