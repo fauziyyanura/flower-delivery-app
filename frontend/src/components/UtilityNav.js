@@ -42,7 +42,7 @@ const UtilityNav = () => {
     <Link to="/products" onClick={closeMenu}>Shop</Link>
     <Link to="/service" onClick={closeMenu}>Service</Link>
     <Link to="/contact" onClick={closeMenu}>Contact</Link>
-    <Link to="/about" onClick={closeMenu}>About Us</Link>
+    <Link to="/AboutPage" onClick={closeMenu}>About Us</Link>
     <Link to="/shipping" onClick={closeMenu}>Shipping & Returns</Link>
     <Link to="/terms" onClick={closeMenu}>Terms & Conditions</Link>
     <Link to="/privacy" onClick={closeMenu}>Privacy Policy</Link>
