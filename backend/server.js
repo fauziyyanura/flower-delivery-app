@@ -71,7 +71,7 @@ app.get("/api/users", async (req, res) => {
       .json({ message: "Failed to fetch users", error: error.message });
   }
 });
-
+// route for online payment
 app.use("/api/payments", paymentRoutes);
 
 // Adding the /api/flower endpoint
