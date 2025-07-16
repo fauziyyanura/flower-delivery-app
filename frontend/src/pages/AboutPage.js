@@ -12,7 +12,7 @@ const AboutPage = () => {
 const navigate = useNavigate(); 
 
 const handleLearnMoreClick = () => {
-    navigate('/product'); 
+    navigate('/products'); 
 };
 
 return (
