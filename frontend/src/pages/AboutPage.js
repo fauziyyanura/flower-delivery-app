@@ -19,9 +19,9 @@ return (
     
     <div className="our-story">
     <div className="con-gr-about">
-    <section>
+    <div className="section-about">
     <h2 className="our-story-title">Our Story</h2>
-    <h3 className="about-title">About</h3>
+    <h3 className="about-title"><i>About</i></h3>
     <h1 className="brand-name">Kyiv LuxeBouquets</h1>
     <p className="description">
         Discover Uniquely Crafted Bouquets and Gifts for Any Occasion: Spread Joy with Our
@@ -65,7 +65,7 @@ return (
   </button>
 </div>
 
-    </section>
+    </div>
     
     
     <section className="about-image-container">
@@ -109,6 +109,7 @@ return (
     <section className="pink-image-container">
         <img src={flowerbouquet} alt="Beautiful Flower Arrangement" className="pink-image" />
     </section>
+    
     <section className="bouquet-info-container">
         <div className="bouquet-info-content">
         <h2>Making Every Day Special</h2>

@@ -1,3 +1,7 @@
+.section{
+  border-bottom: 1px solid #121212;
+}
+
 .contact-form-section {
   display: flex;
   flex-wrap: wrap;
@@ -137,6 +141,19 @@
 
 .social-row a:hover {
   color: #e76691;
+}
+
+@media (min-width:1024px) {
+  .section {
+    margin-top: 10%;
+  }
+  .form-right img {
+    margin-top: -8%;
+  }
+
+  .form-left {
+    margin-top: -15%;
+  }
 }
 
 /*@media (max-width: 768px) {

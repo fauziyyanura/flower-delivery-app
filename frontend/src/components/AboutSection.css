@@ -233,6 +233,7 @@ margin-left: -8%;
      .about{
       display: grid;
       grid-template-columns: 1fr 1fr; 
+      margin-top: -1%;
     }
     .about-header{
       border: 1px solid black; 

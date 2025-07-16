@@ -1,8 +1,40 @@
-/*body, html {
+body, html {
   margin: 0;
   padding: 0;
   
 }
+
+/*.app-container {
+  max-width: 1440px; /* or whatever width fits your design 
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc; /* adjust color and thickness 
+  border-radius: 12px; /* optional, for rounded corners 
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}*/
+
+.app-container {
+  max-width: 1350px; /* or any width you want */
+  margin: auto;
+  /*padding: 16px;*/
+  border: 1px solid #121212; /* change color as desired */
+  border-radius: 2px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); optional */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 8px;
+    border-radius: 5px;
+  }
+}
+
 
 
 
@@ -75,7 +107,7 @@
 
 
 
-/* 📱 Small Devices: Phones  */
+/* 📱 Small Devices: Phones  
 @media (max-width: 599px) {
   .page-frame {
     margin: 1rem;

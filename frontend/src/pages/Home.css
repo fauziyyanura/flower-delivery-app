@@ -28,7 +28,7 @@ body, html {
 border-bottom: none;
 }*/
 
-.home-shell {
+/* .home-shell {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -52,34 +52,19 @@ border-bottom: none;
 }
 
 
-/* Tablet 
-@media (max-width: 768px) {
-  .home-shell {
-    /* padding: 1.5rem 0.75rem; 
-  }
-}*/
 
-/* Split-shell (first 3 sections with divider) */
+
+/* Split-shell (first 3 sections with divider) 
 .split-shell {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  /* position: relative; */
+  /* position: relative; 
 }
 
-/* Divider line */
-/* .split-shell::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 1px;
-  background-color: #000;
-  z-index: 1;
-} */
 
-/* Hide divider for smaller screens */
+
+/* Hide divider for smaller screens 
 @media (max-width: 1024px) {
   .split-shell::before {
     display: none;
@@ -98,6 +83,6 @@ border-bottom: none;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    /* padding: 0 0.75rem; */
+    /* padding: 0 0.75rem; 
   }
-}
+} */

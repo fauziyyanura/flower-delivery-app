@@ -116,6 +116,7 @@
    
     .categories{
       border: 1px solid black; 
+      margin-right: -3%;
  
     }
     .container-of-desk-2{
@@ -123,9 +124,10 @@
       grid-template-columns: 1fr 1fr; 
       grid-template-rows: repeat(2, auto);
     }
-    /*.empty-card{
-      border: 1px solid black; 
 
-    }*/
+    .hero {
+      margin-left: -1%;
+    }
+   
 
   }

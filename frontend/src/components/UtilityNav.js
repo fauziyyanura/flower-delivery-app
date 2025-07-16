@@ -25,7 +25,7 @@ const UtilityNav = () => {
           {menuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
         </button>
 
-        <Link to="/product" className="shop-icon">
+        <Link to="/products" className="shop-icon">
           <FaShoppingBag size={20} />
         </Link>
       </div>
@@ -39,7 +39,7 @@ const UtilityNav = () => {
   </button>
   <div className="menu-links">
     <Link to="/signin" onClick={closeMenu}>Sign In</Link>
-    <Link to="/product" onClick={closeMenu}>Shop</Link>
+    <Link to="/products" onClick={closeMenu}>Shop</Link>
     <Link to="/service" onClick={closeMenu}>Service</Link>
     <Link to="/contact" onClick={closeMenu}>Contact</Link>
     <Link to="/about" onClick={closeMenu}>About Us</Link>

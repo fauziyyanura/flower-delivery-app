@@ -22,7 +22,7 @@ import CancelMessage from "./components/CancelMessage";
 function App() {
   return (
     <>
-    
+    <div className="app-container">
       <UtilityNav />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -44,6 +44,7 @@ function App() {
         <Route path="/cancel" element={<CancelMessage />} />
       </Routes>
       <Footer />
+      </div>
       
     </>
   );
