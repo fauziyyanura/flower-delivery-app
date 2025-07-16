@@ -26,7 +26,9 @@ const SignUp = () => {
         alert("Registration successful!");
         navigate("/"); // or navigate to /signin if preferred
       } else {
-        alert("Registration failed: " + (data.message || "Unknown error"));
+        // alert("Registration failed: " + (data.message || "Unknown error"));
+        alert("Registration failed: " + (data.message || data.error || "Unknown error"));
+
       }
     } catch (error) {
       console.error("Registration error:", error);
