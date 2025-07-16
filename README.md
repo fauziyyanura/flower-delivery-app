@@ -15,7 +15,7 @@ Welcome to the Flower Delivery Website! This platform allows users to order beau
 - [Environment Variables](#environment-variables)
 - [Contributing](#contributing)
 - [License](#license)
-- [Learn more about my flower delivery app admin](#Learn-more-about-my-flower-delivery-app-admin)
+- [Learn more about my flower delivery app ](#Learn-more-about-my-flower-delivery-app-admin)
 - [Author(s)](#authors)
 
 ## Introduction
