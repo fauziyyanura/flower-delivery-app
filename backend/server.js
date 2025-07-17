@@ -7,7 +7,7 @@ const flowerRoutes = require("./routes/flowerRoutes");
 const userRoutes = require("./routes/userRoutes");
 const User = require("./models/userModel");
 const fileUpload = require("express-fileupload");
-const paymentRoutes = require("./routes/paymentRoutes"); // ✅ Import the route
+const paymentRoutes = require("./routes/paymentRoutes"); 
 
 
 const app = express();
