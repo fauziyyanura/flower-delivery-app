@@ -15,7 +15,7 @@ Welcome to the Flower Delivery Website! This platform allows users to order beau
 - [Environment Variables](#environment-variables)
 - [Contributing](#contributing)
 - [License](#license)
-- [Learn more about my flower delivery app ](#Learn-more-about-my-flower-delivery-app-admin)
+- [Learn more about my flower delivery app ](#Learn-more-about-my-flower-delivery-app)
 - [Author(s)](#authors)
 
 ## Introduction
@@ -34,7 +34,7 @@ Welcome to the **Flower Delivery Website**, your go-to platform for sending love
 - **Frontend**: HTML, CSS, JavaScript (or React)
 - **Backend**: Node.js with Express.js
 - **Database**: MongoDB (hosted on MongoDB Atlas)
-- **File Uploads**: Multer for handling image uploads
+- **File Uploads**: Cloudinary for handling image uploads
 - **Environment Management**: dotenv
 - **Cross-Origin Requests**: CORS
 
@@ -65,9 +65,8 @@ MONGODB_URI=your-mongodb-atlas-uri
 
 
 ## Live Deployment Link:
-RENDER DEPLOYMENT LINK FOR ADMIN PANEL: https://flower-delivery-app-admin.onrender.com
-
-Admin Panel : https://flower-delivery-app-admin.onrender.com
+RENDER DEPLOYMENT LINK FOR Full Stack: https://flower-delivery-app-frontend-9foi.onrender.com
+ADMIN PANEL: https://flower-delivery-app-admin.onrender.com
 
 ## API Endpoints
 Base URL: http://localhost:5000/api
@@ -105,7 +104,7 @@ We welcome contributions! To contribute:
 This project is licensed under the MIT Licenses - See the [LICENSE](LICENSE) file for more details.
 
 ## Learn more about my flower delivery app backend
-Watch my loom video: [video](https://www.loom.com/share/448379ea424b41d9a02b89d580cc458d?sid=c3b5e08e-b67b-414c-a878-81d5be7d0d43)
+Watch my loom video: [video](https://www.loom.com/share/3a62d795ccb64b07bad8ba6987ca93cd?sid=8f209c51-5a6e-4a1d-a8db-1ce0a47d0cc0)
 
 
 ## Author(s)
@@ -113,7 +112,8 @@ If you have any questions or need further assistance, feel free to reach out:
 - **Name:** Fauziyya Nura Ahmed
 - **Email:** fauziyyanuraahmad@gmail.com
 - **GitHub:** https://github.com/fauziyyanura
-- **Website:** https://flower-delivery-app-admin.onrender.com
+- **Website:** https://flower-delivery-app-frontend-9foi.onrender.com
+
 
 
 Thank you for Visiting the Flower delivery Website Repository. We hope you find it useful and enjoy contributing to the project.
