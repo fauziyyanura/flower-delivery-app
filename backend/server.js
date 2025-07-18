@@ -30,10 +30,19 @@ mongoose
 // ✅ Middleware
 // app.use(cors());
 
+// app.use(
+//   cors({
+//     origin: "https://flower-delivery-app-frontend-9foi.onrender.com",
+//     methods: ["GET", "POST"],
+//     credentials: true,
+//   })
+// );
+
 app.use(
   cors({
     origin: "https://flower-delivery-app-frontend-9foi.onrender.com",
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
