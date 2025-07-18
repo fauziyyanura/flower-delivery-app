@@ -15,15 +15,12 @@ const ProductPage = () => {
   useEffect(() => {
     const fetchProductAndRelated = async () => {
       try {
-        // Fetch single product
         const productRes = await axios.get(`https://flower-delivery-app.onrender.com/api/flowers/${id}`);
         setProduct(productRes.data);
 
-        // Fetch all flowers
         const allProductsRes = await axios.get('https://flower-delivery-app.onrender.com/api/flowers');
         const allFlowers = allProductsRes.data;
 
-        // Filter out the current flower and pick 3 suggestions
         const suggestions = allFlowers
           .filter(item => item._id !== id)
           .slice(0, 3);
@@ -46,6 +43,14 @@ const ProductPage = () => {
   };
 
   const handleAddToBasket = () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (!user) {
+      alert("Please sign in to add items to your basket.");
+      navigate("/signin");
+      return;
+    }
+
     const currentCart = JSON.parse(localStorage.getItem("cartItems")) || [];
 
     const existingIndex = currentCart.findIndex(item => item._id === product._id);
@@ -65,7 +70,7 @@ const ProductPage = () => {
     localStorage.setItem("cartItems", JSON.stringify(currentCart));
 
     alert(`Added ${quantity} of ${product.name} to basket!`);
-    navigate('/cart'); // 🔁 Redirect to cart after confirmation
+    navigate('/cart');
   };
 
   if (loading) return <div className="loading">Loading product...</div>;
