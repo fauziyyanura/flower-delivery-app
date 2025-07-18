@@ -2,7 +2,12 @@ const express = require("express");
 const router = express.Router();
 const Stripe = require("stripe");
 
-const stripe = Stripe(process.env.STRIPE_SECRET_KEY); // from .env file
+// const stripe = Stripe(process.env.STRIPE_SECRET_KEY); // from .env file
+const StripeLib = require("stripe");
+const stripe = StripeLib(process.env.STRIPE_SECRET_KEY, {
+  httpClient: StripeLib.createFetchHttpClient(),
+});
+
 
 // POST /api/payments/create-checkout-session
 router.post("/create-checkout-session", async (req, res) => {
