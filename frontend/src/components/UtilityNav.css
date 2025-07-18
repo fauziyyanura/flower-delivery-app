@@ -7,6 +7,16 @@
   font-family: sans-serif;
 }
 
+.user-greeting {
+  margin-right: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
 /* MOBILE & TABLET NAV */
 .mobile-nav {
   display: flex;
