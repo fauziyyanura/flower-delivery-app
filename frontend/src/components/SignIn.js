@@ -22,9 +22,14 @@ const SignIn = () => {
       const data = await response.json();
 
       if (response.ok) {
+        // ✅ Store token and user info
         localStorage.setItem("token", data.token);
+        localStorage.setItem("user", JSON.stringify(data.user));
+
         alert("Sign in successful!");
-        navigate("/"); // redirect to homepage
+
+        // ✅ Force refresh so nav updates
+        window.location.href = "/";
       } else {
         alert("Login failed: " + data.message);
       }
