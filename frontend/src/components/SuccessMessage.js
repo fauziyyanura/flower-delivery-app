@@ -51,7 +51,7 @@ const SuccessMessage = () => {
             Thank you, your payment of{" "}
             <strong>${(sessionData.amount_total / 100).toFixed(2)}</strong> was successful.
           </p>
-          <p>Transaction ID: {sessionData.payment_intent || "Unavailable"}</p>
+          <p>Transaction ID: {sessionData.payment_intent?.id || "Unavailable"}</p>
           <button onClick={() => navigate("/")}>Return to Home</button>
         </div>
       ) : (
