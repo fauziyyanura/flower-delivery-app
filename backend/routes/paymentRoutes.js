@@ -44,6 +44,26 @@ router.post("/create-checkout-session", async (req, res) => {
   }
 });
 
+// GET /api/payments/session/:id
+router.get("/session/:id", async (req, res) => {
+  const sessionId = req.params.id;
+
+  try {
+    const session = await stripe.checkout.sessions.retrieve(sessionId, {
+      expand: ["line_items", "payment_intent"],
+    });
+
+    res.status(200).json(session);
+  } catch (error) {
+    console.error("❌ Failed to retrieve Stripe session:", error.message, error);
+    res.status(500).json({ error: "Unable to retrieve session details" });
+  }
+});
+
+
+
+
+
 // GET /api/payments/test
 router.get("/test", (req, res) => {
   res.send("✅ Payment route is working!");
