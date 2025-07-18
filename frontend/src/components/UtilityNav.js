@@ -86,7 +86,8 @@ const UtilityNav = () => {
         <div className="utility-right">
           {user ? (
             <>
-              <span className="user-greeting">Hi, {user.name}</span>
+              <span className="user-greeting">Hi, {user.username || user.name || "Guest"}</span>
+
               <button className="nav-box" onClick={handleSignOut}>Sign Out</button>
             </>
           ) : (
