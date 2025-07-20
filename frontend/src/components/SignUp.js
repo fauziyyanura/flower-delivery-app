@@ -1,38 +1,41 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./signup.css"; // or rename to signup.css if clearer
+import "./signup.css";
 
 const SignUp = () => {
+  const [name, setName] = useState("");           
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    if (loading) return;
+    setLoading(true);
 
     try {
       const response = await fetch("https://flower-delivery-app.onrender.com/api/users/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ name, email, password }),  
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        localStorage.setItem("token", data.token); // only if your backend returns a token
+        localStorage.setItem("token", data.token);
         alert("Registration successful!");
-        navigate("/"); // or navigate to /signin if preferred
+        navigate("/");
       } else {
-        // alert("Registration failed: " + (data.message || "Unknown error"));
         alert("Registration failed: " + (data.message || data.error || "Unknown error"));
-
       }
     } catch (error) {
       console.error("Registration error:", error);
       alert("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -42,9 +45,9 @@ const SignUp = () => {
       <form onSubmit={handleRegister}>
         <input
           type="text"
-          placeholder="Enter your username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Enter your name"              
+          value={name}
+          onChange={(e) => setName(e.target.value)}  
           required
         />
         <input
@@ -61,7 +64,9 @@ const SignUp = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">REGISTER</button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Creating your account..." : "SIGN UP"}
+        </button>
       </form>
     </div>
   );
