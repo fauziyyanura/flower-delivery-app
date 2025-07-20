@@ -28,24 +28,36 @@ mongoose
   });
 
 // ✅ Middleware
-// app.use(cors());
 
 // app.use(
 //   cors({
 //     origin: "https://flower-delivery-app-frontend-9foi.onrender.com",
-//     methods: ["GET", "POST"],
+//     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+//     allowedHeaders: ["Content-Type", "Authorization"],
 //     credentials: true,
 //   })
 // );
 
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://flower-delivery-app-frontend-9foi.onrender.com",
+];
+
 app.use(
   cors({
-    origin: "https://flower-delivery-app-frontend-9foi.onrender.com",
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
+
 
 
 
