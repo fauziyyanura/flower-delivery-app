@@ -10,7 +10,7 @@ const { check } = require("express-validator");
 router.post(
   "/register",
   [
-    check("username", "Username is required").notEmpty(),
+    check("name", "name is required").notEmpty(),
     check("email", "Please include a valid email").isEmail(),
     check("password", "Password must be at least 6 characters long").isLength({
       min: 6,
