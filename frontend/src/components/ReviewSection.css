@@ -70,9 +70,6 @@
     cursor: pointer;
 }
 
-.review-button:hover {
-  background-color: #555;
-}
 
 
 
@@ -225,8 +222,5 @@
   align-self: center;
 }
 
-.review-button:hover {
-  background-color: #e76691;
-}
 }
 

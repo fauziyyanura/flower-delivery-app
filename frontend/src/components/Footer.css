@@ -3,6 +3,7 @@
 /* 🌑 Base Footer Styles */
 .footer {
   background-color: #ffffff;
+  padding: 5px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
