@@ -28,7 +28,7 @@ const ServiceSection = () => {
       {/* Wedding & Event Decor Block */}
 
         <section className="event-hero">
-       <img src={eventDecorImg} alt="Wedding & Event decor visual" />
+      <img src={eventDecorImg} alt="Wedding & Event decor visual" />
 </section>
 </div>
     </>

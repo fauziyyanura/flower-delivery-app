@@ -14,17 +14,20 @@ const Hero = () => {
     <div className="home-container">
       <div className="container-of-desk">
         <section className="hero">
+         <div className="top"> 
           <h1>Kyiv <br /><strong>LuxeBouquets®</strong></h1>
           <p>
-            Discover Uniquely Crafted Bouquets and Gifts for Any Occasion. 
+            Discover Uniquely Crafted Bouquets and Gifts for Any Occasion: 
             Spread Joy with Our <i>Online Flower Delivery Service</i>
           </p>
+          </div>
           <div className="hero-content">
             <img src={floristImg} alt="florist" className="flo-img" />
-            <p className="hero-text">
-              Experience the joy of giving with our modern floral studio. Order online 
-              and send fresh flowers, plants, and gifts today.
-            </p>
+            <div className="vertical-line"></div>
+            <div className="hero-text">
+             <p>Experience the joy of giving with our modern floral studio. Order online 
+              and send fresh flowers, plants, and gifts today.</p> 
+            </div>
           </div>
         </section>
 
