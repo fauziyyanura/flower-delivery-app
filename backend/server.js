@@ -10,6 +10,7 @@ const fileUpload = require("express-fileupload");
 const paymentRoutes = require("./routes/paymentRoutes"); 
 
 
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -30,14 +31,36 @@ mongoose
 
 // ✅ Middleware
 
+// app.use(
+//   cors({
+//     origin: "https://flower-delivery-app-frontend-9foi.onrender.com",
+//     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+//     allowedHeaders: ["Content-Type", "Authorization"],
+//     credentials: true,
+//   })
+// );
+
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://flower-delivery-app-frontend-9foi.onrender.com",
+];
 
 app.use(
   cors({
-    origin: "https://flower-delivery-app-frontend-9foi.onrender.com",
-    methods: ["GET", "POST"],
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+
     credentials: true,
   })
 );
+
 
 
 app.use(express.json()); // Parses JSON bodies
@@ -73,6 +96,10 @@ app.get("/api/users", async (req, res) => {
 });
 app.use("/api/payments", paymentRoutes); // ✅ Mount the route
 
+
+
+// route for online payment
+app.use("/api/payments", paymentRoutes);
 
 // Adding the /api/flower endpoint
 app.get("/api/flower", (req, res) => {

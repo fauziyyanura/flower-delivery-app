@@ -2,6 +2,7 @@ const express = require("express");
 const {
     addFlower,
     getAllFlowers,
+    getFlowerById, 
     deleteFlower,
     updateFlower,
 } = require("../controllers/flowerController");
@@ -13,6 +14,8 @@ router.post("/", addFlower);
 
 
 router.get("/", getAllFlowers);
+
+router.get("/:id", getFlowerById);
 
 // Delete a flower by ID
 router.delete("/:id", async (req, res) => {

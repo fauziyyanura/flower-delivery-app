@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const validator = require('validator');
 
 const userSchema = new mongoose.Schema({
-    username: { type: String, required: true },
+    name: { type: String, required: true },
     email: { type: String, required: true, unique: true,  validate: [validator.isEmail, 'Please enter a valid email'] 
     },
     password: { type: String, required: true },
@@ -18,12 +18,12 @@ userSchema.pre('save', async function (next) {
     next();
 });
 
-userSchema.statics.signup = async function ({ username, email, password }) {
+userSchema.statics.signup = async function ({ name, email, password }) {
     const existingUser = await this.findOne({ email });
     if (existingUser) {
         throw new Error('User already exists');
     }
-    const newUser = new this({ username, email, password });
+    const newUser = new this({ name, email, password });
     await newUser.save();
     return newUser;
 };
@@ -39,7 +39,17 @@ userSchema.statics.login = async function ({ email, password }) {
     }
     // Generate JWT
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-    return { user, token };
+    // return { user, token };
+
+    // ✅ Return only safe fields
+  return {
+    token,
+    user: {
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+    }
+};
 };
 
 // Instance Method: Compare Password (optional, if needed elsewhere)

@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
+
 // POST /api/payments/create-checkout-session
 router.post("/create-checkout-session", async (req, res) => {
   const { cartItems } = req.body;
@@ -53,6 +54,7 @@ router.post("/create-checkout-session", async (req, res) => {
     return res.status(200).json({ url: session.url });
   } catch (error) {
     console.error(" Stripe session creation failed:", error.message);
+ 
     return res.status(500).json({
       message: "Failed to create checkout session",
       error: error.message,
@@ -78,3 +80,4 @@ router.get("/session/:id", async (req, res) => {
 
 
 module.exports=router;
+

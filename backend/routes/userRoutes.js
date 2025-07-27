@@ -1,5 +1,8 @@
 const express = require("express");
-const { registerUser, loginUser } = require("../controllers/userController");
+const { registerUser, loginUser, getUserProfile } = require("../controllers/userController");
+const authMiddleware = require("../middleware/authMiddleware");
+
+
 const router = express.Router();
 const { check } = require("express-validator");
 
@@ -7,7 +10,7 @@ const { check } = require("express-validator");
 router.post(
   "/register",
   [
-    check("username", "Username is required").notEmpty(),
+    check("name", "name is required").notEmpty(),
     check("email", "Please include a valid email").isEmail(),
     check("password", "Password must be at least 6 characters long").isLength({
       min: 6,
@@ -18,5 +21,6 @@ router.post(
 
 // Route for user login
 router.post("/login", loginUser);
+router.get("/profile", authMiddleware, getUserProfile);
 
 module.exports = router;
