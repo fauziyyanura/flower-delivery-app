@@ -1,0 +1,134 @@
+/* Footer.css */
+
+/* 🌑 Base Footer Styles */
+.footer {
+  background-color: #ffffff;
+  padding: 0px 6px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.footer-col h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.footer-col ul li:hover {
+  text-decoration: underline;
+}
+
+.reminder-col p {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.reminder-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.reminder-form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.reminder-form button {
+  padding: 0.6rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer-social {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* 📱 Mobile: 1 column per row */
+@media (max-width: 599px) {
+  .footer-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    border-top: 1px solid #000;
+  }
+}
+
+/* 📲 Tablet: 2 columns per row with middle and row borders */
+@media (min-width: 600px) and (max-width: 768px) {
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid #000;
+    border-bottom: none;
+    gap: 2rem;
+    position: relative;
+  }
+
+  .footer-columns::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+  transform: translateY(-50%);
+  }
+
+  .footer-col:nth-child(odd),
+  .reminder-col {
+    border-bottom: none;
+    border-right: 1px solid #ccc;
+    padding-right: 1rem;
+  }
+
+  .footer-col:nth-child(even) {
+    padding-left: 1rem;
+  }
+}
+
+/* 💻 Desktop: 4 columns in one row with vertical dividers */
+@media (min-width: 900px) {
+  .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #000;
+    gap: 0; /* No gap so borders align cleanly */
+  }
+
+  .footer-col,
+  .reminder-col {
+    border-right: 1px solid #ccc;
+    padding: 0 1rem;
+  }
+
+  /* Remove right border from the last column */
+  .footer-columns > :last-child {
+    border-right: none;
+  }
+}

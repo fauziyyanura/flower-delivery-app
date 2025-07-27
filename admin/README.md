@@ -105,7 +105,7 @@ We welcome contributions! To contribute:
 ## Licenses
 This project is licensed under the MIT Licenses - See the [LICENSE](LICENSE) file for more details.
 
-## Learn more about my flower delivery app admin dSashboard
+## Learn more about my flower delivery app admin dashhboard
 Watch my loom video: [video](https://www.loom.com/share/448379ea424b41d9a02b89d580cc458d?sid=c3b5e08e-b67b-414c-a878-81d5be7d0d43)
 
 
@@ -114,7 +114,7 @@ If you have any questions or need further assistance, feel free to reach out:
 - **Name:** Fauziyya Nura Ahmed
 - **Email:** fauziyyanuraahmad@gmail.com
 - **GitHub:** https://github.com/fauziyyanura
-- **Website:** https://flower-delivery-app-admin.onrender.com
+- **Website:** https://flower-delivery-app-admin.onrender.com (for admin dashboard)
                 https://flower-delivery-app.onrender.com/api/flowers
                 https://flower-delivery-app.onrender.com/api/users
 

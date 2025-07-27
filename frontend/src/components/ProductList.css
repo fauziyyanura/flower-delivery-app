@@ -1,0 +1,82 @@
+.product-list {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-list h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #444;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.product-card p {
+  font-weight: bold;
+  color: #5a3e36;
+}
+
+.product-card button {
+  margin-top: 0.5rem;
+  background-color: #5a3e36;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.product-card button:hover {
+  background-color: #7a554b;
+}
+
+
+/*  Mobile: 1 product per row */
+@media (max-width: 599px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet: 2 products per row */
+@media (min-width: 600px) and (max-width: 899px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

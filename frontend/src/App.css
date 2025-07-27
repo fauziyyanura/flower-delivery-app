@@ -1,0 +1,47 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* .app-container {
+  max-width: 1350px; /* or any width you want 
+  margin: auto;
+  /* padding: 16px; 
+  border: 1px solid #121212; /* change color as desired 
+  border-radius: 2px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); optional 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width:390px){
+  .app-container {
+    padding: 0 10px 0 0
+  }
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 20px;
+    border-radius: 5px;
+  }
+} */
+
+.app-container  {
+  max-width: 100%;
+  box-sizing: border-box;
+  
+}
+.app-container {
+  border: 1px solid #121212;
+}
+
+@media (min-width: 1440px) {
+  .app-container {
+    max-width: 1550px;
+  }
+}
+
+

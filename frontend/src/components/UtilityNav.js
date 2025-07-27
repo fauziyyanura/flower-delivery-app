@@ -1,0 +1,103 @@
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { FaBars, FaShoppingBag, FaTimes } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaPinterest,
+  FaFacebookF,
+  FaTwitter,
+  FaTelegramPlane,
+} from "react-icons/fa";
+
+import "./UtilityNav.css";
+
+const UtilityNav = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    setUser(storedUser);
+  }, []);
+
+  const toggleMenu = () => setMenuOpen(prev => !prev);
+  const closeMenu = () => setMenuOpen(false);
+
+  const handleSignOut = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+    navigate("/");
+  };
+
+  return (
+    <nav className="utility-nav">
+      {/* Mobile/Tablet Nav */}
+      <div className="mobile-nav">
+        <button className="menu-icon" onClick={toggleMenu}>
+          {menuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+        </button>
+
+        <Link to="/products" className="shop-icon">
+          <FaShoppingBag size={20} />
+        </Link>
+      </div>
+
+      {/* Slide-out menu */}
+      {menuOpen && (
+        <div className="mobile-menu">
+          <button className="close-menu-icon" onClick={closeMenu} aria-label="Close menu">
+            <FaTimes size={24} />
+          </button>
+          <div className="menu-links">
+            {user ? (
+              <>
+                <p className="user-greeting">Hi, {user.name}</p>
+                <button onClick={() => { handleSignOut(); closeMenu(); }}>Sign Out</button>
+              </>
+            ) : (
+              <Link to="/signin" onClick={closeMenu}>Sign In</Link>
+            )}
+            <Link to="/products" onClick={closeMenu}>Shop</Link>
+            <Link to="/service" onClick={closeMenu}>Service</Link>
+            <Link to="/contact" onClick={closeMenu}>Contact</Link>
+            <Link to="/AboutPage" onClick={closeMenu}>About Us</Link>
+            <Link to="/shipping" onClick={closeMenu}>Shipping & Returns</Link>
+            <Link to="/terms" onClick={closeMenu}>Terms & Conditions</Link>
+            <Link to="/privacy" onClick={closeMenu}>Privacy Policy</Link>
+          </div>
+
+          <div className="menu-socials">
+            <button className="icon-button" aria-label="Instagram"><FaInstagram size={20} /></button>
+            <button className="icon-button" aria-label="Pinterest"><FaPinterest size={20} /></button>
+            <button className="icon-button" aria-label="Facebook"><FaFacebookF size={20} /></button>
+            <button className="icon-button" aria-label="Twitter"><FaTwitter size={20} /></button>
+            <button className="icon-button" aria-label="Telegram"><FaTelegramPlane size={20} /></button>
+          </div>
+        </div>
+      )}
+
+      {/* Desktop Nav */}
+      <div className="desktop-nav">
+        <div className="utility-left">
+          <Link to="/products" className="nav-box">Shop</Link>
+          <Link to="/contact" className="nav-box">Contact</Link>
+        </div>
+        <div className="utility-right">
+          {user ? (
+            <>
+              <span className="user-greeting">Hi, {user.username || user.name || "Guest"}</span>
+
+              <button className="nav-box" onClick={handleSignOut}>Sign Out</button>
+            </>
+          ) : (
+            <Link to="/signin" className="nav-box">Sign In</Link>
+          )}
+          <Link to="/cart" className="cart">Cart</Link>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default UtilityNav;
