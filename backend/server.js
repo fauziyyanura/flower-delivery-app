@@ -40,6 +40,7 @@ mongoose
 
 const allowedOrigins = [
   "http://localhost:3000",
+  "https://flower-delivery-app-admin.onrender.com",
   "https://flower-delivery-app-frontend-9foi.onrender.com",
 ];
 
